@@ -1,4 +1,6 @@
-### Hi there 👋
+### Zdravíme! Pozemnšťané!
+
+Číčojo se zabývá obchodem s virtuálními tokeny. Celý projekt stojí na myšlence, že si klienti koupí tzv. digitální tokeny, čímž financují firmy, nákup nemovitostí i movitých věcí výměnou za podíl na jejich budoucím zisku.
 
 <!--
 **CheeChoJo/Cheechojo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
