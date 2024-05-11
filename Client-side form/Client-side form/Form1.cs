@@ -21,5 +21,19 @@ namespace Client_side_form
         {
 
         }
+
+        private void buttonLogIn_Click(object sender, EventArgs e)
+        {
+            Form LogIn = new LogIn();
+            LogIn.Show();
+            this.Hide();
+        }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            Form SignIn = new SignIn();
+            SignIn.Show();
+            this.Hide();
+        }
     }
 }

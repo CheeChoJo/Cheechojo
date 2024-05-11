@@ -18,3 +18,5 @@ C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side fo
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CoreCompileInputs.cache
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.exe
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.pdb
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.LogIn.resources
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.SignIn.resources

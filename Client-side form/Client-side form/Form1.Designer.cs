@@ -56,6 +56,7 @@
             this.buttonLogIn.TabIndex = 1;
             this.buttonLogIn.Text = "Log In";
             this.buttonLogIn.UseVisualStyleBackColor = false;
+            this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);
             // 
             // buttonSignUp
             // 
@@ -68,6 +69,7 @@
             this.buttonSignUp.TabIndex = 2;
             this.buttonSignUp.Text = "Sign Up";
             this.buttonSignUp.UseVisualStyleBackColor = false;
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
             // CheeChoJoClient
             // 
