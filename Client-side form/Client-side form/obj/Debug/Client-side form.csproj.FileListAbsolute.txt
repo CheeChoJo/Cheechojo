@@ -8,3 +8,13 @@ C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Clie
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CoreCompileInputs.cache
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.exe
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.pdb
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.exe.config
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.exe
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.pdb
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.AssemblyReference.cache
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.CheeChoJoClient.resources
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Properties.Resources.resources
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.GenerateResource.cache
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CoreCompileInputs.cache
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.exe
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.pdb
