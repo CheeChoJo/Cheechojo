@@ -21,3 +21,6 @@ C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side fo
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.LogIn.resources
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.SignIn.resources
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Exchange.resources
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
+C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
