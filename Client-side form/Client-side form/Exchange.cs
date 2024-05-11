@@ -19,7 +19,7 @@ namespace Client_side_form
 
         private void Exchange_Load(object sender, EventArgs e)
         {
-            textBoxPrice1.Text = "Tvoje máma";
+            
         }
 
         private void labelValue_Click(object sender, EventArgs e)
