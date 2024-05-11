@@ -51,6 +51,8 @@
             this.textBoxValue3 = new System.Windows.Forms.TextBox();
             this.textBoxValu2 = new System.Windows.Forms.TextBox();
             this.textBoxValu3 = new System.Windows.Forms.TextBox();
+            this.textBoxAmountBS = new System.Windows.Forms.TextBox();
+            this.textBoxValueBS = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTicker
@@ -110,6 +112,7 @@
             // 
             // textBoxPrice1
             // 
+            this.textBoxPrice1.Enabled = false;
             this.textBoxPrice1.Location = new System.Drawing.Point(184, 133);
             this.textBoxPrice1.Name = "textBoxPrice1";
             this.textBoxPrice1.Size = new System.Drawing.Size(80, 26);
@@ -117,6 +120,7 @@
             // 
             // textBoxVol1
             // 
+            this.textBoxVol1.Enabled = false;
             this.textBoxVol1.Location = new System.Drawing.Point(362, 127);
             this.textBoxVol1.Name = "textBoxVol1";
             this.textBoxVol1.Size = new System.Drawing.Size(99, 26);
@@ -124,6 +128,7 @@
             // 
             // textBoxValue1
             // 
+            this.textBoxValue1.Enabled = false;
             this.textBoxValue1.Location = new System.Drawing.Point(577, 127);
             this.textBoxValue1.Name = "textBoxValue1";
             this.textBoxValue1.Size = new System.Drawing.Size(90, 26);
@@ -131,6 +136,7 @@
             // 
             // textBoxBalance
             // 
+            this.textBoxBalance.Enabled = false;
             this.textBoxBalance.Location = new System.Drawing.Point(540, 13);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(126, 26);
@@ -205,6 +211,7 @@
             // 
             // textBoxPrice2
             // 
+            this.textBoxPrice2.Enabled = false;
             this.textBoxPrice2.Location = new System.Drawing.Point(183, 203);
             this.textBoxPrice2.Name = "textBoxPrice2";
             this.textBoxPrice2.Size = new System.Drawing.Size(80, 26);
@@ -212,6 +219,7 @@
             // 
             // textBoxPrice3
             // 
+            this.textBoxPrice3.Enabled = false;
             this.textBoxPrice3.Location = new System.Drawing.Point(184, 283);
             this.textBoxPrice3.Name = "textBoxPrice3";
             this.textBoxPrice3.Size = new System.Drawing.Size(79, 26);
@@ -219,6 +227,7 @@
             // 
             // textBoxVolume3
             // 
+            this.textBoxVolume3.Enabled = false;
             this.textBoxVolume3.Location = new System.Drawing.Point(366, 203);
             this.textBoxVolume3.Name = "textBoxVolume3";
             this.textBoxVolume3.Size = new System.Drawing.Size(94, 26);
@@ -226,6 +235,7 @@
             // 
             // textBoxValue3
             // 
+            this.textBoxValue3.Enabled = false;
             this.textBoxValue3.Location = new System.Drawing.Point(366, 286);
             this.textBoxValue3.Name = "textBoxValue3";
             this.textBoxValue3.Size = new System.Drawing.Size(94, 26);
@@ -233,6 +243,7 @@
             // 
             // textBoxValu2
             // 
+            this.textBoxValu2.Enabled = false;
             this.textBoxValu2.Location = new System.Drawing.Point(577, 201);
             this.textBoxValu2.Name = "textBoxValu2";
             this.textBoxValu2.Size = new System.Drawing.Size(86, 26);
@@ -240,16 +251,33 @@
             // 
             // textBoxValu3
             // 
+            this.textBoxValu3.Enabled = false;
             this.textBoxValu3.Location = new System.Drawing.Point(577, 292);
             this.textBoxValu3.Name = "textBoxValu3";
             this.textBoxValu3.Size = new System.Drawing.Size(89, 26);
             this.textBoxValu3.TabIndex = 22;
+            // 
+            // textBoxAmountBS
+            // 
+            this.textBoxAmountBS.Location = new System.Drawing.Point(286, 505);
+            this.textBoxAmountBS.Name = "textBoxAmountBS";
+            this.textBoxAmountBS.Size = new System.Drawing.Size(69, 26);
+            this.textBoxAmountBS.TabIndex = 23;
+            // 
+            // textBoxValueBS
+            // 
+            this.textBoxValueBS.Location = new System.Drawing.Point(392, 505);
+            this.textBoxValueBS.Name = "textBoxValueBS";
+            this.textBoxValueBS.Size = new System.Drawing.Size(69, 26);
+            this.textBoxValueBS.TabIndex = 24;
             // 
             // Exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 612);
+            this.Controls.Add(this.textBoxValueBS);
+            this.Controls.Add(this.textBoxAmountBS);
             this.Controls.Add(this.textBoxValu3);
             this.Controls.Add(this.textBoxValu2);
             this.Controls.Add(this.textBoxValue3);
@@ -306,5 +334,7 @@
         private System.Windows.Forms.TextBox textBoxValue3;
         private System.Windows.Forms.TextBox textBoxValu2;
         private System.Windows.Forms.TextBox textBoxValu3;
+        private System.Windows.Forms.TextBox textBoxAmountBS;
+        private System.Windows.Forms.TextBox textBoxValueBS;
     }
 }
