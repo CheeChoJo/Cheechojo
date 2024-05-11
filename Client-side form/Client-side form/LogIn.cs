@@ -16,5 +16,10 @@ namespace Client_side_form
         {
             InitializeComponent();
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
