@@ -21,5 +21,12 @@ namespace Client_side_form
         {
 
         }
+
+        private void buttonSignIn2_Click(object sender, EventArgs e)
+        {
+            Form Exchange = new Exchange();
+            Exchange.Show();
+            this.Hide();
+        }
     }
 }

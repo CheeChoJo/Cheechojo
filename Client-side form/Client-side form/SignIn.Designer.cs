@@ -66,6 +66,7 @@
             this.buttonSignIn2.TabIndex = 3;
             this.buttonSignIn2.Text = "Sign In";
             this.buttonSignIn2.UseVisualStyleBackColor = true;
+            this.buttonSignIn2.Click += new System.EventHandler(this.buttonSignIn2_Click);
             // 
             // labelSignName
             // 

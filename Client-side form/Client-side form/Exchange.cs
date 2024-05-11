@@ -16,5 +16,15 @@ namespace Client_side_form
         {
             InitializeComponent();
         }
+
+        private void Exchange_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelValue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
