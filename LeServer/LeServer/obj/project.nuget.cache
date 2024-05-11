@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wOo+x4L/dX6QqlAvXgH5IeoArukFA8CM3b/9BQrYfQCjKKLRvVn+KJYST8RyDU4gUZxzyAZfbg8+45Jn28saxA==",
+  "success": true,
+  "projectFilePath": "/Users/alexavetisyan/Projects/LeServer/LeServer/LeServer.csproj",
+  "expectedPackageFiles": [
+    "/Users/alexavetisyan/.nuget/packages/restsharp/110.2.0/restsharp.110.2.0.nupkg.sha512",
+    "/Users/alexavetisyan/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
+    "/Users/alexavetisyan/.nuget/packages/system.text.json/7.0.2/system.text.json.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
