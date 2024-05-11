@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../buildMultiTargeting/LeServer.props" />
+  <Import Project="..\buildMultiTargeting\LeServer.props" />
 </Project>
