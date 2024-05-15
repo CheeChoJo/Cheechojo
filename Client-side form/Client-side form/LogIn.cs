@@ -29,7 +29,7 @@ namespace Client_side_form
             string logName = Convert.ToString(textBoxLogName);  
             string logPassword = Convert.ToString(textBoxLogName);
             string filePath = "C:\\Users\\jirif\\csharp\\osoby\\" + Name + ".csv";
-            if (logName == )
+            //if (logName == )
             {
 
             }

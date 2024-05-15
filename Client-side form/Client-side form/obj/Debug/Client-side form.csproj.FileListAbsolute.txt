@@ -24,3 +24,19 @@ C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side fo
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.AssemblyReference.cache
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Exchange.resources
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.CheeChoJoClient.resources
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.LogIn.resources
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Properties.Resources.resources
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.SignIn.resources
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.GenerateResource.cache
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CoreCompileInputs.cache
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.exe
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.pdb
+U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.exe.config
+U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.exe
+U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.pdb
+U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
+U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
+U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
