@@ -26,16 +26,33 @@ namespace Client_side_form
 
         private void buttonLogIn2_Click(object sender, EventArgs e)
         {
-            string logName = Convert.ToString(textBoxLogName);  
-            string logPassword = Convert.ToString(textBoxLogName);
-            string filePath = "C:\\Users\\jirif\\csharp\\osoby\\" + Name + ".csv";
-            if (logName == )
+            //uložit username a password
+            //if username existuje? (najdeme txt file?)
+            //      pokud ne - hodíme no user error
+            //      pokud ano - if pass matchuje?
+            //              pokud ne - hodíme nematchuje pass error
+            //              pokud ano - otevřeme exchange.cs
+            string logName = Convert.ToString(textBoxLogName.Text);
+            string logPassword = Convert.ToString(textBoxLogPass.Text);
+            string filePath = "C:\\Users\\Public\\Documents\\" + logName + ".txt";
+            if (File.Exists(filePath) == false)
             {
-
+                MessageBox.Show("No such user exists!");
             }
-            Form Exchange = new Exchange();
-            Exchange.Show();
-            this.Hide();
+            else
+            {
+                string filePassword = File.ReadAllText(filePath);
+                if (filePassword == logPassword)
+                {
+                    Form Exchange = new Exchange();
+                    Exchange.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong password!");
+                }
+            }
         }
     }
 }
