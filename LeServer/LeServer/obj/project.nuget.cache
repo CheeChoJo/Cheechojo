@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IouTcZW7hz9fd+6tStbWBSM7HNk+tQ7JMQTz74rfAHzvbAiA29S3ttmuv4vL3CNNt8GQUC5awoo1R1pOLtSzbQ==",
+  "dgSpecHash": "9+kdN575Lks6hkTa4AtzMUXvLRu1vqDxBmBQ/j+L2e4k1H/6H4JcA3rTB8lcSE+E8CqG84yehU5mpjohI/Byxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cerma\\OneDrive\\Plocha\\seminar\\Cheechojo\\LeServer\\LeServer\\LeServer.csproj",
+  "projectFilePath": "C:\\Users\\jirif\\csharp\\Cheechojo\\LeServer\\LeServer\\LeServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cerma\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
-    "C:\\Users\\cerma\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\cerma\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+    "C:\\Users\\jirif\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\jirif\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\jirif\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

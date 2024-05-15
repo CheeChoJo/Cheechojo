@@ -24,6 +24,7 @@ C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side fo
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
 C:\Users\cerma\OneDrive\Plocha\seminar\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
+<<<<<<< HEAD
 U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.AssemblyReference.cache
 U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Exchange.resources
 U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.CheeChoJoClient.resources
@@ -40,3 +41,11 @@ U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side f
 U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
 U:\seminář\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
 U:\seminář\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
+=======
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Exchange.resources
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.LogIn.resources
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.SignIn.resources
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
+>>>>>>> refs/remotes/origin/main
