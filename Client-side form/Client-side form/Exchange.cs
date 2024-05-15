@@ -31,8 +31,6 @@ namespace Client_side_form
             double value2 = price2 * volume2;
             double value3 = price3 * volume3;
             double balance = 150;
-            double Amount = Convert.ToDouble(textBoxAmountBS.Text);
-            double ValueBS = Convert.ToDouble(textBoxValueBS.Text);
             textBoxPrice1.Text = Convert.ToString(price1);
             textBoxPrice2.Text = Convert.ToString(price2);
             textBoxPrice3.Text = Convert.ToString(price3);
@@ -43,12 +41,12 @@ namespace Client_side_form
             textBoxValue2.Text = Convert.ToString(value2);
             textBoxValue3.Text = Convert.ToString(value3);
             textBoxBalance.Text = Convert.ToString(balance)+ " €";
+            textBoxAmountBS.Text = " ";
             //nakupovací okénko
             int TickerSelected = listBoxExchange.SelectedIndex;
             switch (TickerSelected)
             {
                 case 0:
-                    
                     break;
                 case 1:
                     break;
