@@ -33,17 +33,6 @@ namespace Client_side_form
         private void Exchange_Load(object sender, EventArgs e)
         {
             textBoxAmountBS.Text = " ";
-        }
-
-        private void labelValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timerExchange_Tick(object sender, EventArgs e)
-        {
-            //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
-            //základní tabulka
             textBoxPrice1.Text = Convert.ToString(price1) + " €";
             textBoxPrice2.Text = Convert.ToString(price2) + " €";
             textBoxPrice3.Text = Convert.ToString(price3) + " €";
@@ -58,6 +47,17 @@ namespace Client_side_form
             price1 += 1;
             price2 += 1;
             price3 += 1;
+        }
+
+        private void labelValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerExchange_Tick(object sender, EventArgs e)
+        {
+            //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
+            //základní tabulka
             
             if(double.TryParse(textBoxAmountBS.Text, out Amount)) //řeší, když je Amount prázdný po zapnutí
             {
@@ -81,6 +81,7 @@ namespace Client_side_form
             {
                 textBoxValueBS.Text = "0 €";
             }
+            Exchange_Load(this, e);
         }
 
         private void buttonBuySell_Click(object sender, EventArgs e)
