@@ -22,6 +22,9 @@ namespace Client_side_form
         static double value2 = price2 * volume2;
         static double value3 = price3 * volume3;
         static double balance = 150;
+        static int BuySell;
+        static double Amount;
+        static double valueBS;
         public Exchange()
         {
             InitializeComponent();
@@ -29,32 +32,7 @@ namespace Client_side_form
 
         private void Exchange_Load(object sender, EventArgs e)
         {
-            //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
-            //základní tabulka
-            textBoxPrice1.Text = Convert.ToString(price1);
-            textBoxPrice2.Text = Convert.ToString(price2);
-            textBoxPrice3.Text = Convert.ToString(price3);
-            textBoxVolume1.Text = Convert.ToString(volume1);
-            textBoxVolume2.Text = Convert.ToString(volume2);
-            textBoxVolume3.Text = Convert.ToString(volume3);
-            textBoxValue1.Text = Convert.ToString(price1 * volume1);
-            textBoxValue2.Text = Convert.ToString(price2 * volume2);
-            textBoxValue3.Text = Convert.ToString(price3 * volume3);
-            textBoxBalance.Text = Convert.ToString(balance)+ " €";
             textBoxAmountBS.Text = " ";
-            //nakupovací okénko
-            int TickerSelected = listBoxExchange.SelectedIndex;
-            switch (TickerSelected)
-            {
-                case 0:
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                default:
-                    break;
-            }
         }
 
         private void labelValue_Click(object sender, EventArgs e)
@@ -64,8 +42,176 @@ namespace Client_side_form
 
         private void timerExchange_Tick(object sender, EventArgs e)
         {
+            //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
+            //základní tabulka
+            textBoxPrice1.Text = Convert.ToString(price1) + " €";
+            textBoxPrice2.Text = Convert.ToString(price2) + " €";
+            textBoxPrice3.Text = Convert.ToString(price3) + " €";
+            textBoxVolume1.Text = Convert.ToString(volume1);
+            textBoxVolume2.Text = Convert.ToString(volume2);
+            textBoxVolume3.Text = Convert.ToString(volume3);
+            textBoxValue1.Text = Convert.ToString(price1 * volume1);
+            textBoxValue2.Text = Convert.ToString(price2 * volume2);
+            textBoxValue3.Text = Convert.ToString(price3 * volume3);
+            textBoxBalance.Text = Convert.ToString(balance) + " €";
+            textBoxValueBS.Text = "0 €";
             price1 += 1;
-            Exchange_Load(sender, e);
+            price2 += 1;
+            price3 += 1;
+            
+            if(double.TryParse(textBoxAmountBS.Text, out Amount)) //řeší, když je Amount prázdný po zapnutí
+            {
+                switch (listBoxExchange.SelectedIndex)
+                {
+                    case 0:
+                        textBoxValueBS.Text = (price1 * Amount).ToString() + " €";
+                        break;
+                    case 1:
+                        textBoxValueBS.Text = (price2 * Amount).ToString() + " €";
+                        break;
+                    case 2:
+                        textBoxValueBS.Text = (price3 * Amount).ToString() + " €";
+                        break;
+                    default:
+                        textBoxValueBS.Text = "0 €";
+                        break;
+                }
+            }
+            else
+            {
+                textBoxValueBS.Text = "0 €";
+            }
+        }
+
+        private void buttonBuySell_Click(object sender, EventArgs e)
+        {
+            //nakupovací okénko
+            if (double.TryParse(textBoxAmountBS.Text, out Amount))
+            {
+                switch (listBoxExchange.SelectedIndex)
+                {
+                    case 0:
+                        valueBS = price1 * Amount;
+                        break;
+                    case 1:
+                        valueBS = price2 * Amount;
+                        break;
+                    case 2:
+                        valueBS = price3 * Amount;
+                        break;
+                    default:
+                        valueBS = 0;
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Zadejte platnou částku.");
+                return;
+            }
+
+            switch (listBoxExchange.SelectedIndex)
+            {
+                case 0:
+                    if (BuySell == 1)
+                    {
+                        if (balance < valueBS)
+                        {
+                            MessageBox.Show("Na vašem investičním účtě nemáte dostatek prostředků.");
+                        }
+                        else
+                        {
+                            volume1 += Amount;
+                            balance -= valueBS;
+                        }
+                    }
+                    else
+                    {
+                        if (volume1 < Amount)
+                        {
+                            MessageBox.Show("Nedostatečný objem k prodeji.");
+                        }
+                        else
+                        {
+                            volume1 -= Amount;
+                            balance += valueBS;
+                        }
+                    }
+                    break;
+                case 1:
+                    if (BuySell == 1)
+                    {
+                        if (balance < valueBS)
+                        {
+                            MessageBox.Show("Na vašem investičním účtě nemáte dostatek prostředků.");
+                        }
+                        else
+                        {
+                            volume2 += Amount;
+                            balance -= valueBS;
+                        }
+                    }
+                    else
+                    {
+                        if (volume2 < Amount)
+                        {
+                            MessageBox.Show("Nedostatečný objem k prodeji.");
+                        }
+                        else
+                        {
+                            volume2 -= Amount;
+                            balance += valueBS;
+                        }
+                    }
+                    break;
+                case 2:
+                    if (BuySell == 1)
+                    {
+                        if (balance < valueBS)
+                        {
+                            MessageBox.Show("Na vašem investičním účtě nemáte dostatek prostředků.");
+                        }
+                        else
+                        {
+                            volume3 += Amount;
+                            balance -= valueBS;
+                        }
+                    }
+                    else
+                    {
+                        if (volume3 < Amount)
+                        {
+                            MessageBox.Show("Nedostatečný objem k prodeji.");
+                        }
+                        else
+                        {
+                            volume3 -= Amount;
+                            balance += valueBS;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+            textBoxBalance.Text = balance.ToString() + " €";
+        }
+
+        private void radioButtonBuy_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonBuy.Checked)
+            {
+                BuySell = 1;
+            }
+            else
+            {
+                BuySell = 0;
+            }
+            
+        }
+
+        private void radioButtonSell_CheckedChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }
