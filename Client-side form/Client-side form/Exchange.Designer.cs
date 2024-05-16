@@ -57,6 +57,7 @@
             this.timerExchange = new System.Windows.Forms.Timer(this.components);
             this.listBoxExchange = new System.Windows.Forms.ListBox();
             this.labelRovn = new System.Windows.Forms.Label();
+            this.textBoxSum = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTicker
@@ -281,7 +282,7 @@
             // textBoxValue3
             // 
             this.textBoxValue3.Enabled = false;
-            this.textBoxValue3.Location = new System.Drawing.Point(385, 190);
+            this.textBoxValue3.Location = new System.Drawing.Point(384, 186);
             this.textBoxValue3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue3.Name = "textBoxValue3";
             this.textBoxValue3.Size = new System.Drawing.Size(61, 20);
@@ -331,11 +332,20 @@
             this.labelRovn.TabIndex = 26;
             this.labelRovn.Text = "=";
             // 
+            // textBoxSum
+            // 
+            this.textBoxSum.Enabled = false;
+            this.textBoxSum.Location = new System.Drawing.Point(379, 237);
+            this.textBoxSum.Name = "textBoxSum";
+            this.textBoxSum.Size = new System.Drawing.Size(77, 20);
+            this.textBoxSum.TabIndex = 27;
+            // 
             // Exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 398);
+            this.Controls.Add(this.textBoxSum);
             this.Controls.Add(this.labelRovn);
             this.Controls.Add(this.listBoxExchange);
             this.Controls.Add(this.textBoxValueBS);
@@ -402,5 +412,6 @@
         private System.Windows.Forms.ListBox listBoxExchange;
         public System.Windows.Forms.Timer timerExchange;
         private System.Windows.Forms.Label labelRovn;
+        private System.Windows.Forms.TextBox textBoxSum;
     }
 }

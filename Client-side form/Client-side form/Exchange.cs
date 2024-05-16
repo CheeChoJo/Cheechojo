@@ -18,9 +18,6 @@ namespace Client_side_form
         static double volume1 = 1;
         static double volume2 = 2;
         static double volume3 = 3;
-        static double value1 = price1 * volume1;
-        static double value2 = price2 * volume2;
-        static double value3 = price3 * volume3;
         static double balance = 150;
         static int BuySell;
         static double Amount;
@@ -34,17 +31,17 @@ namespace Client_side_form
 
         private void Exchange_Load(object sender, EventArgs e)
         {
-            
             textBoxPrice1.Text = Convert.ToString(price1) + " €";
             textBoxPrice2.Text = Convert.ToString(price2) + " €";
             textBoxPrice3.Text = Convert.ToString(price3) + " €";
             textBoxVolume1.Text = Convert.ToString(volume1);
             textBoxVolume2.Text = Convert.ToString(volume2);
             textBoxVolume3.Text = Convert.ToString(volume3);
-            textBoxValue1.Text = Convert.ToString(price1 * volume1);
-            textBoxValue2.Text = Convert.ToString(price2 * volume2);
-            textBoxValue3.Text = Convert.ToString(price3 * volume3);
+            textBoxValue1.Text = Convert.ToString(price1 * volume1) + " €";
+            textBoxValue2.Text = Convert.ToString(price2 * volume2) + " €";
+            textBoxValue3.Text = Convert.ToString(price3 * volume3) + " €";
             textBoxBalance.Text = Convert.ToString(balance) + " €";
+            textBoxSum.Text = Convert.ToString(price1*volume1 + price2*volume2+price3*volume3) + " €";
             price1 += 1;
             price2 += 1;
             price3 += 1;
