@@ -44,12 +44,12 @@ namespace Client_side_form
                     using (StreamWriter writer = new StreamWriter(filePath))
                     {
                         writer.Write(signPassword);
+                        Form Exchange = new Exchange();
+                        Exchange.Show();
+                        this.Hide();
                     }
                 }
             }
-            Form Exchange = new Exchange();
-            Exchange.Show();
-            this.Hide();
         }
     }
 }
