@@ -28,11 +28,13 @@ namespace Client_side_form
         public Exchange()
         {
             InitializeComponent();
+            textBoxAmountBS.Text = " ";
+            textBoxValueBS.Text = "0 €";
         }
 
         private void Exchange_Load(object sender, EventArgs e)
         {
-            textBoxAmountBS.Text = " ";
+            
             textBoxPrice1.Text = Convert.ToString(price1) + " €";
             textBoxPrice2.Text = Convert.ToString(price2) + " €";
             textBoxPrice3.Text = Convert.ToString(price3) + " €";
@@ -43,7 +45,6 @@ namespace Client_side_form
             textBoxValue2.Text = Convert.ToString(price2 * volume2);
             textBoxValue3.Text = Convert.ToString(price3 * volume3);
             textBoxBalance.Text = Convert.ToString(balance) + " €";
-            textBoxValueBS.Text = "0 €";
             price1 += 1;
             price2 += 1;
             price3 += 1;
@@ -57,8 +58,7 @@ namespace Client_side_form
         private void timerExchange_Tick(object sender, EventArgs e)
         {
             //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
-            //základní tabulka
-            
+            //základní tabulka            
             if(double.TryParse(textBoxAmountBS.Text, out Amount)) //řeší, když je Amount prázdný po zapnutí
             {
                 switch (listBoxExchange.SelectedIndex)
