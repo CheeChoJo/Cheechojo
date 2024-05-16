@@ -47,4 +47,3 @@ C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Clie
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
->>>>>>> refs/remotes/origin/main
