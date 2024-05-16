@@ -37,9 +37,9 @@ namespace Client_side_form
             textBoxVolume1.Text = Convert.ToString(volume1);
             textBoxVolume2.Text = Convert.ToString(volume2);
             textBoxVolume3.Text = Convert.ToString(volume3);
-            textBoxValue1.Text = Convert.ToString(value1);
-            textBoxValue2.Text = Convert.ToString(value2);
-            textBoxValue3.Text = Convert.ToString(value3);
+            textBoxValue1.Text = Convert.ToString(price1 * volume1);
+            textBoxValue2.Text = Convert.ToString(price2 * volume2);
+            textBoxValue3.Text = Convert.ToString(price3 * volume3);
             textBoxBalance.Text = Convert.ToString(balance)+ " €";
             textBoxAmountBS.Text = " ";
             //nakupovací okénko
@@ -65,7 +65,7 @@ namespace Client_side_form
         private void timerExchange_Tick(object sender, EventArgs e)
         {
             price1 += 1;
-            this.Refresh();
+            Exchange_Load(sender, e);
         }
     }
 }
