@@ -35,7 +35,7 @@ namespace Client_side_form
             }
             else
             {
-                if (signPassword == signRepeat)
+                if (signPassword != signRepeat)
                 {
                     MessageBox.Show("Passwords must match");
                 }

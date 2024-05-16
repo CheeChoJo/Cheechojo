@@ -12,6 +12,16 @@ namespace Client_side_form
 {
     public partial class Exchange : Form
     {
+        static double price1 = 10;
+        static double price2 = 20;
+        static double price3 = 30;
+        static double volume1 = 1;
+        static double volume2 = 2;
+        static double volume3 = 3;
+        static double value1 = price1 * volume1;
+        static double value2 = price2 * volume2;
+        static double value3 = price3 * volume3;
+        static double balance = 150;
         public Exchange()
         {
             InitializeComponent();
@@ -21,16 +31,6 @@ namespace Client_side_form
         {
             //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
             //základní tabulka
-            double price1 = 10;
-            double price2 = 20;
-            double price3 = 30;
-            double volume1 = 1;
-            double volume2 = 2;
-            double volume3 = 3;
-            double value1 = price1 * volume1;
-            double value2 = price2 * volume2;
-            double value3 = price3 * volume3;
-            double balance = 150;
             textBoxPrice1.Text = Convert.ToString(price1);
             textBoxPrice2.Text = Convert.ToString(price2);
             textBoxPrice3.Text = Convert.ToString(price3);
@@ -62,8 +62,9 @@ namespace Client_side_form
 
         }
 
-        private void timerExvhange_Tick(object sender, EventArgs e)
+        private void timerExchange_Tick(object sender, EventArgs e)
         {
+            price1 += 1;
             this.Refresh();
         }
     }
