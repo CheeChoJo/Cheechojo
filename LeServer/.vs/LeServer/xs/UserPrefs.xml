@@ -1,4 +1,27 @@
 ﻿<Properties StartupConfiguration="{546313D5-E485-491C-A5BB-3469F3CBFB2E}|https">
-  <MonoDevelop.Ide.ItemProperties.LeServer FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.LeServer PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LeServer/data_service.proto">
+    <Files>
+      <File FileName="LeServer/Program.cs" Line="34" Column="11" />
+      <File FileName="LeServer/ValuesController.cs" Line="16" Column="2" />
+      <File FileName="LeServer/data_service.proto" Line="11" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LeServer">
+            <Node name="LeServer">
+              <Node name="data_service.proto" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

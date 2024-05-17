@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+service DataService {
+  rpc GetCurrentData (Empty) returns (Data) {}
+}
+
+message Empty {}
+
+message Data {
+  double value = 1;
+}
