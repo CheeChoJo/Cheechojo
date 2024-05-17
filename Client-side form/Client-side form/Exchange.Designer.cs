@@ -308,7 +308,7 @@
             // timerExchange
             // 
             this.timerExchange.Enabled = true;
-            this.timerExchange.Interval = 2500;
+            this.timerExchange.Interval = 1000;
             this.timerExchange.Tick += new System.EventHandler(this.timerExchange_Tick);
             // 
             // listBoxExchange

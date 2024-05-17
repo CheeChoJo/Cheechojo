@@ -22,6 +22,7 @@ namespace Client_side_form
         static int BuySell;
         static double Amount;
         static double valueBS;
+        static Random rnd = new Random();
         public Exchange()
         {
             InitializeComponent();
@@ -42,9 +43,19 @@ namespace Client_side_form
             textBoxValue3.Text = Convert.ToString(price3 * volume3) + " €";
             textBoxBalance.Text = Convert.ToString(balance) + " €";
             textBoxSum.Text = Convert.ToString(price1*volume1 + price2*volume2+price3*volume3) + " €";
-            price1 += 1;
-            price2 += 1;
-            price3 += 1;
+            int update = rnd.Next(1, 4);
+            switch (update)
+            {
+                case 1:
+                    price1 += 1;
+                    break;
+                case 2:
+                    price2 += 1;
+                    break;
+                case 3:
+                    price3 += 1;
+                    break;
+            }
         }
 
         private void labelValue_Click(object sender, EventArgs e)
