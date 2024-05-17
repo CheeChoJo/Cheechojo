@@ -63,3 +63,5 @@ C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\tr\Z
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\zh-tw\ZedGraph.resources.dll
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details3.resources
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details1.resources
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details2.resources

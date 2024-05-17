@@ -16,5 +16,10 @@ namespace Client_side_form
         {
             InitializeComponent();
         }
+
+        private void listBoxRange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

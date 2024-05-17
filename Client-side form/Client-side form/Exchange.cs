@@ -243,8 +243,7 @@ namespace Client_side_form
         }
 
         private void buttonDetails3_Click(object sender, EventArgs e)
-        {
-            Form Details3 = new Details3();
+        {            Form Details3 = new Details3();
             Details3.Show();
             this.Hide();
         }
