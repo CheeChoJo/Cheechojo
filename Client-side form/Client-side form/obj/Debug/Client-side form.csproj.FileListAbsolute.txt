@@ -47,3 +47,19 @@ C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Clie
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\ZedGraph.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\ZedGraph.xml
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details3.resources

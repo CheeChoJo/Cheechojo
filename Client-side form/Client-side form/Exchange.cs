@@ -222,5 +222,31 @@ namespace Client_side_form
         {
           
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDetails1_Click(object sender, EventArgs e)
+        {
+            Form Details1 = new Details1();
+            Details1.Show();
+            this.Hide();
+        }
+
+        private void buttonDetails2_Click(object sender, EventArgs e)
+        {
+            Form Details2 = new Details2();
+            Details2.Show();
+            this.Hide();
+        }
+
+        private void buttonDetails3_Click(object sender, EventArgs e)
+        {
+            Form Details3 = new Details3();
+            Details3.Show();
+            this.Hide();
+        }
     }
 }

@@ -47,8 +47,29 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Details1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details1.Designer.cs">
+      <DependentUpon>Details1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details2.Designer.cs">
+      <DependentUpon>Details2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details3.Designer.cs">
+      <DependentUpon>Details3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exchange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +96,15 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Details1.resx">
+      <DependentUpon>Details1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details2.resx">
+      <DependentUpon>Details2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details3.resx">
+      <DependentUpon>Details3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exchange.resx">
       <DependentUpon>Exchange.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ciciojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
