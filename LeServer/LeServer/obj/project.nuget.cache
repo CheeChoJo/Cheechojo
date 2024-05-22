@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9lW9SBMiA8FXDl2kmnnk5y5mjka4KPcrS7RmOe6Y0UX7M5ETF0e/8XLgjOWNtr6F0OuymMZfuot7hnIhwvBpfg==",
+  "dgSpecHash": "a8t+ZTJdeVIP6PvBBZUxQaWfjJGq5VHQRx/ZkN81jzGzeBF9z7Zeyo1KNJ+wM++pc5BPVsthTHVX4LME415KFw==",
   "success": true,
-  "projectFilePath": "/Users/alexavetisyan/seminar/Cheechojo/LeServer/LeServer/LeServer.csproj",
+  "projectFilePath": "C:\\Users\\jirif\\csharp\\Cheechojo\\LeServer\\LeServer\\LeServer.csproj",
   "expectedPackageFiles": [
-    "/Users/alexavetisyan/.nuget/packages/grpc.tools/2.63.0/grpc.tools.2.63.0.nupkg.sha512",
-    "/Users/alexavetisyan/.nuget/packages/restsharp/110.2.0/restsharp.110.2.0.nupkg.sha512",
-    "/Users/alexavetisyan/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/alexavetisyan/.nuget/packages/system.text.json/7.0.2/system.text.json.7.0.2.nupkg.sha512"
+    "C:\\Users\\jirif\\.nuget\\packages\\grpc.tools\\2.63.0\\grpc.tools.2.63.0.nupkg.sha512",
+    "C:\\Users\\jirif\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\jirif\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\jirif\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

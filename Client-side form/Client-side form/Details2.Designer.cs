@@ -77,6 +77,7 @@
             this.listBoxRange.Name = "listBoxRange";
             this.listBoxRange.Size = new System.Drawing.Size(668, 17);
             this.listBoxRange.TabIndex = 3;
+            this.listBoxRange.SelectedIndexChanged += new System.EventHandler(this.listBoxRange_SelectedIndexChanged);
             // 
             // Details2
             // 
