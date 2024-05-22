@@ -43,6 +43,17 @@ namespace Client_side_form
                     var content = await response.Content.ReadAsStringAsync();
                     string output = JsonConvert.SerializeObject(content);
                     User deserializedProduct = JsonConvert.DeserializeObject<User>(output);
+                    switch (buySell)
+                    {
+                        case 0: //sell
+                            
+                            break;
+                        case 1: //buy
+                            User.
+                            break;
+                        default:
+                            break;
+                    }                    
                 }
                 else
                 {
@@ -151,8 +162,7 @@ namespace Client_side_form
                         }
                         else
                         {
-                            volume1 += Amount;
-                            balance -= valueBS;
+                            BuySell();
                         }
                     }
                     else
@@ -163,8 +173,7 @@ namespace Client_side_form
                         }
                         else
                         {
-                            volume1 -= Amount;
-                            balance += valueBS;
+                            BuySell();
                         }
                     }
                     break;
@@ -230,11 +239,11 @@ namespace Client_side_form
         {
             if (radioButtonBuy.Checked)
             {
-                BuySell();
+                buySell = 1;
             }
             else
             {
-                BuySell();
+                buySell = 0;
             }
             
         }
