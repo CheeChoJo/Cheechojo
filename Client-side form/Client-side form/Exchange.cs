@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +21,7 @@ namespace Client_side_form
         static double volume2 = 2;
         static double volume3 = 3;
         static double balance = 150;
-        static int BuySell;
+        static int buySell;
         static double Amount;
         static double valueBS;
         static Random rnd = new Random();
@@ -30,6 +32,25 @@ namespace Client_side_form
             textBoxValueBS.Text = "0 €";
         }
 
+        private async void BuySell()
+        {
+            User user = new User();
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync("http://localhost:7142/");
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    string output = JsonConvert.SerializeObject(content);
+                    User deserializedProduct = JsonConvert.DeserializeObject<User>(output);
+                }
+                else
+                {
+                    MessageBox.Show("PEBCAK Error!!!");
+                    //System.Diagnostics.Process.Start("Shutdown", "-s -t 10");
+                }
+            }
+        }
         private void Exchange_Load(object sender, EventArgs e)
         {
             textBoxPrice1.Text = Convert.ToString(price1) + " €";
@@ -122,7 +143,7 @@ namespace Client_side_form
             switch (listBoxExchange.SelectedIndex)
             {
                 case 0:
-                    if (BuySell == 1)
+                    if (buySell == 1)
                     {
                         if (balance < valueBS)
                         {
@@ -148,7 +169,7 @@ namespace Client_side_form
                     }
                     break;
                 case 1:
-                    if (BuySell == 1)
+                    if (buySell== 1)
                     {
                         if (balance < valueBS)
                         {
@@ -174,7 +195,7 @@ namespace Client_side_form
                     }
                     break;
                 case 2:
-                    if (BuySell == 1)
+                    if (buySell== 1)
                     {
                         if (balance < valueBS)
                         {
@@ -209,11 +230,11 @@ namespace Client_side_form
         {
             if (radioButtonBuy.Checked)
             {
-                BuySell = 1;
+                BuySell();
             }
             else
             {
-                BuySell = 0;
+                BuySell();
             }
             
         }
