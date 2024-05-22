@@ -247,5 +247,10 @@ namespace Client_side_form
             Details3.Show();
             this.Hide();
         }
+
+        private void textBoxPrice3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
