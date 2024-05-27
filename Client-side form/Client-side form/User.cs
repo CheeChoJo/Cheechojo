@@ -9,7 +9,6 @@ namespace Client_side_form
     public class User
     {
         public string userName = "";
-        public string password = "";
         public int balance;
         public int volume1;
         public int volume2;

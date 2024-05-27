@@ -35,6 +35,7 @@ namespace Client_side_form
 
         private async void BuySell()
         {
+            MessageBox.Show(user.userName);
             using (var client = new HttpClient())
             {
                 var response = await client.GetAsync("http://192.168.0.167:7142/");
