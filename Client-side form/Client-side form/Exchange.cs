@@ -25,6 +25,7 @@ namespace Client_side_form
         static double Amount;
         static double valueBS;
         static Random rnd = new Random();
+        static User user = new User();
         public Exchange()
         {
             InitializeComponent();
@@ -34,22 +35,21 @@ namespace Client_side_form
 
         private async void BuySell()
         {
-            User user = new User();
             using (var client = new HttpClient())
             {
-                var response = await client.GetAsync("http://localhost:7142/");
+                var response = await client.GetAsync("http://192.168.0.167:7142/");
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     string output = JsonConvert.SerializeObject(content);
                     User deserializedProduct = JsonConvert.DeserializeObject<User>(output);
+                    MessageBox.Show(Convert.ToString(deserializedProduct));
                     switch (buySell)
                     {
                         case 0: //sell
                             
                             break;
                         case 1: //buy
-                            User.
                             break;
                         default:
                             break;
@@ -151,7 +151,7 @@ namespace Client_side_form
                 return;
             }
 
-            switch (listBoxExchange.SelectedIndex)
+            switch (listBoxExchange.SelectedIndex)//za tuhle nádhernou prasárnu může čermák, na mě nekoukejte -isa:3
             {
                 case 0:
                     if (buySell == 1)

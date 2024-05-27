@@ -8,12 +8,12 @@ namespace Client_side_form
 {
     internal class User
     {
-        public string UserName;
-        public string Password;
-        public int Balance;
-        public int Volume1;
-        public int Volume2;
-        public int Volume3;
+        public string userName = "";
+        public string password = "";
+        public int balance;
+        public int volume1;
+        public int volume2;
+        public int volume3;
 
         public void LoadNP(string username, string password)
         {

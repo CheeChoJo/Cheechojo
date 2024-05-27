@@ -44,6 +44,7 @@ namespace Client_side_form
                 string filePassword = File.ReadAllText(filePath);
                 if (filePassword == logPassword)
                 {
+                    User userName = logName;
                     Form Exchange = new Exchange();
                     Exchange.Show();
                     this.Hide();
