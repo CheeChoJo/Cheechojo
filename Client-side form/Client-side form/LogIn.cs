@@ -42,9 +42,9 @@ namespace Client_side_form
             else
             {
                 string filePassword = File.ReadAllText(filePath);
-                if (filePassword == logPassword)
+                if (filePassword == logPassword)//nastaví username proměnnou ve třídě User na to co teď zadal user k přihlášení (logName) a otevře exchange form 
                 {
-                    User userName = logName;
+                    User.userName = logName;
                     Form Exchange = new Exchange();
                     Exchange.Show();
                     this.Hide();
