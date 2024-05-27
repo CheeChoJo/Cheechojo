@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Client_side_form
 {
@@ -14,7 +15,7 @@ namespace Client_side_form
         public int volume2 { get; set; }
         public int volume3 { get; set; }
 
-        public void LoadNP(string username, string password)
+        public void LoadN(string username)
         {
 
         }
