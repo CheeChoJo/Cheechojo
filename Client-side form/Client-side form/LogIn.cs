@@ -14,6 +14,7 @@ namespace Client_side_form
 {
     public partial class LogIn : Form
     {
+        public User user { get; set; }
         public LogIn()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace Client_side_form
             //      pokud ano - if pass matchuje?
             //              pokud ne - hodíme nematchuje pass error
             //              pokud ano - otevřeme exchange.cs
-            User user = new User();
             string logName = Convert.ToString(textBoxLogName.Text);
             string logPassword = Convert.ToString(textBoxLogPass.Text);
             string filePath = "C:\\Users\\Public\\Documents\\" + logName + ".txt";

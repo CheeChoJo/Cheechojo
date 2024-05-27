@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Client_side_form
 {
     public partial class CheeChoJoClient : Form
     {
+        private User user;
         public CheeChoJoClient()
         {
             InitializeComponent();
+            user = new User();
         }
 
         private void CheeChoJoClient_Load(object sender, EventArgs e)
@@ -25,6 +28,7 @@ namespace Client_side_form
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             Form LogIn = new LogIn();
+            LogIn.User = user;
             LogIn.Show();
             this.Hide();
         }
