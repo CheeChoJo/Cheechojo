@@ -49,7 +49,7 @@ namespace Client_side_form
                     Form Exchange = new Exchange();
                     Exchange.Show();
                     this.Hide();
-                }
+                }//no tak jsem čurák no
                 else
                 {
                     MessageBox.Show("Wrong password!");
