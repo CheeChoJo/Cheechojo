@@ -32,6 +32,7 @@ namespace Client_side_form
             //      pokud ano - if pass matchuje?
             //              pokud ne - hodíme nematchuje pass error
             //              pokud ano - otevřeme exchange.cs
+            User user = new User();
             string logName = Convert.ToString(textBoxLogName.Text);
             string logPassword = Convert.ToString(textBoxLogPass.Text);
             string filePath = "C:\\Users\\Public\\Documents\\" + logName + ".txt";
@@ -44,7 +45,7 @@ namespace Client_side_form
                 string filePassword = File.ReadAllText(filePath);
                 if (filePassword == logPassword)//nastaví username proměnnou ve třídě User na to co teď zadal user k přihlášení (logName) a otevře exchange form 
                 {
-                    User.userName = logName;
+                    user.userName = logName;
                     Form Exchange = new Exchange();
                     Exchange.Show();
                     this.Hide();
