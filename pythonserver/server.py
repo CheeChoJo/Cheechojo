@@ -1,12 +1,15 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request, send_file
 import time
 import requests
+import json
+import os
 from flask_bcrypt import Bcrypt
 import datetime
 
 
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
 
 def ping(url):
     start_time = time.time()
@@ -36,7 +39,23 @@ def get_data():
 
         return jsonify(data)
         
-        
+@app.route('/new-user', methods='POST')
+def newuser():
+    data = request.get_json() #veme json a hodi to do data
+    file_name = data.get('accountName')+'.json'
+    with open(file_name, 'w') as account_file: #vytvori novej file 
+        json.dump(data, account_file)
+
+@app.route('/change')
+def change():
+    data = request.get_json()
+    try: #pokud existuje soubor
+        file_name = data.get('accountName')+'.json'
+        with open(file_name, 'w') as account_file: #tim ze se soubor otevre ve write modu, viz 'w' se vymaze vsechno info v nem
+            json.dump(data, account_file) #dropujeme novy info
+        return send_file(file_name, as_attachment=True, mimetype='application/json') #posle soubor zpatky
+    except:
+        return "no such file"
     
 
 if __name__ == '__main__':

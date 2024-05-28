@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{CAD1F127-693D-420D-AE74-85E45D6F15AE}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Client-side_220form PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Exchange.cs">
+    <Files>
+      <File FileName="LogIn.cs" Line="1" Column="1" />
+      <File FileName="SignIn.cs" Line="1" Column="1" />
+      <File FileName="User.cs" Line="1" Column="1" />
+      <File FileName="Exchange.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Client-side form">
+            <Node name="Client-side form" expanded="True">
+              <Node name="Exchange.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
