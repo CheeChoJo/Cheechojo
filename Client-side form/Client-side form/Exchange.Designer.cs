@@ -67,6 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,7 +108,7 @@
             // 
             this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBalance.Location = new System.Drawing.Point(27, 14);
+            this.labelBalance.Location = new System.Drawing.Point(3, 17);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.Size = new System.Drawing.Size(90, 32);
             this.labelBalance.TabIndex = 4;
@@ -150,7 +151,7 @@
             // textBoxBalance
             // 
             this.textBoxBalance.Enabled = false;
-            this.textBoxBalance.Location = new System.Drawing.Point(140, 16);
+            this.textBoxBalance.Location = new System.Drawing.Point(99, 23);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(126, 26);
             this.textBoxBalance.TabIndex = 9;
@@ -338,7 +339,7 @@
             // textBoxSum
             // 
             this.textBoxSum.Enabled = false;
-            this.textBoxSum.Location = new System.Drawing.Point(917, 308);
+            this.textBoxSum.Location = new System.Drawing.Point(917, 296);
             this.textBoxSum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSum.Name = "textBoxSum";
             this.textBoxSum.Size = new System.Drawing.Size(114, 26);
@@ -434,11 +435,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.textBoxBalance);
             this.panel2.Controls.Add(this.labelBalance);
-            this.panel2.Location = new System.Drawing.Point(752, 15);
+            this.panel2.Location = new System.Drawing.Point(721, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 60);
+            this.panel2.Size = new System.Drawing.Size(314, 72);
             this.panel2.TabIndex = 33;
             // 
             // panel3
@@ -463,10 +465,19 @@
             this.panel3.Controls.Add(this.labelVolume);
             this.panel3.Controls.Add(this.labelValue);
             this.panel3.Controls.Add(this.labelPrice);
-            this.panel3.Location = new System.Drawing.Point(10, 81);
+            this.panel3.Location = new System.Drawing.Point(10, 93);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1035, 339);
+            this.panel3.Size = new System.Drawing.Size(1035, 327);
             this.panel3.TabIndex = 34;
+            // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(239, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 66);
+            this.button3.TabIndex = 10;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Exchange
             // 
@@ -528,5 +539,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button3;
     }
 }
