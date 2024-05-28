@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelTicker = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exchange));
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelValue = new System.Windows.Forms.Label();
             this.labelVolume = new System.Windows.Forms.Label();
@@ -58,36 +58,37 @@
             this.listBoxExchange = new System.Windows.Forms.ListBox();
             this.labelRovn = new System.Windows.Forms.Label();
             this.textBoxSum = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonDetails1 = new System.Windows.Forms.Button();
             this.buttonDetails2 = new System.Windows.Forms.Button();
             this.buttonDetails3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelTicker
-            // 
-            this.labelTicker.AutoSize = true;
-            this.labelTicker.Location = new System.Drawing.Point(114, 85);
-            this.labelTicker.Name = "labelTicker";
-            this.labelTicker.Size = new System.Drawing.Size(51, 20);
-            this.labelTicker.TabIndex = 0;
-            this.labelTicker.Text = "Ticker";
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(266, 85);
+            this.labelPrice.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(252, 11);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(44, 20);
+            this.labelPrice.Size = new System.Drawing.Size(66, 32);
             this.labelPrice.TabIndex = 1;
             this.labelPrice.Text = "Price";
             // 
             // labelValue
             // 
             this.labelValue.AutoSize = true;
-            this.labelValue.Location = new System.Drawing.Point(654, 85);
+            this.labelValue.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValue.Location = new System.Drawing.Point(614, 11);
             this.labelValue.Name = "labelValue";
-            this.labelValue.Size = new System.Drawing.Size(50, 20);
+            this.labelValue.Size = new System.Drawing.Size(70, 32);
             this.labelValue.TabIndex = 2;
             this.labelValue.Text = "Value";
             this.labelValue.Click += new System.EventHandler(this.labelValue_Click);
@@ -95,34 +96,37 @@
             // labelVolume
             // 
             this.labelVolume.AutoSize = true;
-            this.labelVolume.Location = new System.Drawing.Point(442, 85);
+            this.labelVolume.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVolume.Location = new System.Drawing.Point(424, 11);
             this.labelVolume.Name = "labelVolume";
-            this.labelVolume.Size = new System.Drawing.Size(63, 20);
+            this.labelVolume.Size = new System.Drawing.Size(90, 32);
             this.labelVolume.TabIndex = 3;
             this.labelVolume.Text = "Volume";
             // 
             // labelBalance
             // 
             this.labelBalance.AutoSize = true;
-            this.labelBalance.Location = new System.Drawing.Point(510, 34);
+            this.labelBalance.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.Location = new System.Drawing.Point(27, 14);
             this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(71, 20);
+            this.labelBalance.Size = new System.Drawing.Size(90, 32);
             this.labelBalance.TabIndex = 4;
-            this.labelBalance.Text = "Balance:";
+            this.labelBalance.Text = "Balance";
             // 
             // labelTicker1
             // 
             this.labelTicker1.AutoSize = true;
-            this.labelTicker1.Location = new System.Drawing.Point(116, 151);
+            this.labelTicker1.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTicker1.Location = new System.Drawing.Point(106, 57);
             this.labelTicker1.Name = "labelTicker1";
-            this.labelTicker1.Size = new System.Drawing.Size(60, 20);
+            this.labelTicker1.Size = new System.Drawing.Size(60, 32);
             this.labelTicker1.TabIndex = 5;
-            this.labelTicker1.Text = "Ticker1";
+            this.labelTicker1.Text = "BKR";
             // 
             // textBoxPrice1
             // 
             this.textBoxPrice1.Enabled = false;
-            this.textBoxPrice1.Location = new System.Drawing.Point(248, 145);
+            this.textBoxPrice1.Location = new System.Drawing.Point(247, 61);
             this.textBoxPrice1.Name = "textBoxPrice1";
             this.textBoxPrice1.Size = new System.Drawing.Size(80, 26);
             this.textBoxPrice1.TabIndex = 6;
@@ -130,7 +134,7 @@
             // textBoxVolume1
             // 
             this.textBoxVolume1.Enabled = false;
-            this.textBoxVolume1.Location = new System.Drawing.Point(426, 146);
+            this.textBoxVolume1.Location = new System.Drawing.Point(420, 61);
             this.textBoxVolume1.Name = "textBoxVolume1";
             this.textBoxVolume1.Size = new System.Drawing.Size(98, 26);
             this.textBoxVolume1.TabIndex = 7;
@@ -138,7 +142,7 @@
             // textBoxValue1
             // 
             this.textBoxValue1.Enabled = false;
-            this.textBoxValue1.Location = new System.Drawing.Point(642, 146);
+            this.textBoxValue1.Location = new System.Drawing.Point(606, 61);
             this.textBoxValue1.Name = "textBoxValue1";
             this.textBoxValue1.Size = new System.Drawing.Size(90, 26);
             this.textBoxValue1.TabIndex = 8;
@@ -146,7 +150,7 @@
             // textBoxBalance
             // 
             this.textBoxBalance.Enabled = false;
-            this.textBoxBalance.Location = new System.Drawing.Point(604, 31);
+            this.textBoxBalance.Location = new System.Drawing.Point(140, 16);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(126, 26);
             this.textBoxBalance.TabIndex = 9;
@@ -154,9 +158,10 @@
             // radioButtonBuy
             // 
             this.radioButtonBuy.AutoSize = true;
-            this.radioButtonBuy.Location = new System.Drawing.Point(270, 509);
+            this.radioButtonBuy.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonBuy.Location = new System.Drawing.Point(211, 52);
             this.radioButtonBuy.Name = "radioButtonBuy";
-            this.radioButtonBuy.Size = new System.Drawing.Size(61, 24);
+            this.radioButtonBuy.Size = new System.Drawing.Size(75, 36);
             this.radioButtonBuy.TabIndex = 10;
             this.radioButtonBuy.TabStop = true;
             this.radioButtonBuy.Text = "Buy";
@@ -166,9 +171,10 @@
             // radioButtonSell
             // 
             this.radioButtonSell.AutoSize = true;
-            this.radioButtonSell.Location = new System.Drawing.Point(270, 557);
+            this.radioButtonSell.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonSell.Location = new System.Drawing.Point(211, 85);
             this.radioButtonSell.Name = "radioButtonSell";
-            this.radioButtonSell.Size = new System.Drawing.Size(60, 24);
+            this.radioButtonSell.Size = new System.Drawing.Size(77, 36);
             this.radioButtonSell.TabIndex = 11;
             this.radioButtonSell.TabStop = true;
             this.radioButtonSell.Text = "Sell";
@@ -178,26 +184,34 @@
             // labelAmountBS
             // 
             this.labelAmountBS.AutoSize = true;
-            this.labelAmountBS.Location = new System.Drawing.Point(354, 471);
+            this.labelAmountBS.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmountBS.Location = new System.Drawing.Point(326, 56);
             this.labelAmountBS.Name = "labelAmountBS";
-            this.labelAmountBS.Size = new System.Drawing.Size(65, 20);
+            this.labelAmountBS.Size = new System.Drawing.Size(93, 32);
             this.labelAmountBS.TabIndex = 12;
             this.labelAmountBS.Text = "Amount";
             // 
             // labelValueBS
             // 
             this.labelValueBS.AutoSize = true;
-            this.labelValueBS.Location = new System.Drawing.Point(476, 471);
+            this.labelValueBS.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValueBS.Location = new System.Drawing.Point(626, 56);
             this.labelValueBS.Name = "labelValueBS";
-            this.labelValueBS.Size = new System.Drawing.Size(50, 20);
+            this.labelValueBS.Size = new System.Drawing.Size(70, 32);
             this.labelValueBS.TabIndex = 13;
             this.labelValueBS.Text = "Value";
             // 
             // buttonBuySell
             // 
-            this.buttonBuySell.Location = new System.Drawing.Point(633, 523);
+            this.buttonBuySell.BackColor = System.Drawing.Color.LightGray;
+            this.buttonBuySell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonBuySell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuySell.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuySell.ForeColor = System.Drawing.Color.Black;
+            this.buttonBuySell.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonBuySell.Location = new System.Drawing.Point(775, 37);
             this.buttonBuySell.Name = "buttonBuySell";
-            this.buttonBuySell.Size = new System.Drawing.Size(100, 40);
+            this.buttonBuySell.Size = new System.Drawing.Size(112, 95);
             this.buttonBuySell.TabIndex = 14;
             this.buttonBuySell.Text = "Buy/Sell";
             this.buttonBuySell.UseVisualStyleBackColor = true;
@@ -206,25 +220,27 @@
             // labelTicker2
             // 
             this.labelTicker2.AutoSize = true;
-            this.labelTicker2.Location = new System.Drawing.Point(116, 226);
+            this.labelTicker2.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTicker2.Location = new System.Drawing.Point(106, 129);
             this.labelTicker2.Name = "labelTicker2";
-            this.labelTicker2.Size = new System.Drawing.Size(60, 20);
+            this.labelTicker2.Size = new System.Drawing.Size(62, 32);
             this.labelTicker2.TabIndex = 15;
-            this.labelTicker2.Text = "Ticker2";
+            this.labelTicker2.Text = "STW";
             // 
             // labelTicker3
             // 
             this.labelTicker3.AutoSize = true;
-            this.labelTicker3.Location = new System.Drawing.Point(116, 303);
+            this.labelTicker3.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTicker3.Location = new System.Drawing.Point(106, 201);
             this.labelTicker3.Name = "labelTicker3";
-            this.labelTicker3.Size = new System.Drawing.Size(60, 20);
+            this.labelTicker3.Size = new System.Drawing.Size(86, 32);
             this.labelTicker3.TabIndex = 16;
             this.labelTicker3.Text = "Ticker3";
             // 
             // textBoxPrice2
             // 
             this.textBoxPrice2.Enabled = false;
-            this.textBoxPrice2.Location = new System.Drawing.Point(249, 215);
+            this.textBoxPrice2.Location = new System.Drawing.Point(247, 135);
             this.textBoxPrice2.Name = "textBoxPrice2";
             this.textBoxPrice2.Size = new System.Drawing.Size(80, 26);
             this.textBoxPrice2.TabIndex = 17;
@@ -232,57 +248,57 @@
             // textBoxPrice3
             // 
             this.textBoxPrice3.Enabled = false;
-            this.textBoxPrice3.Location = new System.Drawing.Point(249, 292);
+            this.textBoxPrice3.Location = new System.Drawing.Point(247, 207);
             this.textBoxPrice3.Name = "textBoxPrice3";
-            this.textBoxPrice3.Size = new System.Drawing.Size(79, 26);
+            this.textBoxPrice3.Size = new System.Drawing.Size(80, 26);
             this.textBoxPrice3.TabIndex = 18;
             this.textBoxPrice3.TextChanged += new System.EventHandler(this.textBoxPrice3_TextChanged);
             // 
             // textBoxVolume2
             // 
             this.textBoxVolume2.Enabled = false;
-            this.textBoxVolume2.Location = new System.Drawing.Point(430, 222);
+            this.textBoxVolume2.Location = new System.Drawing.Point(420, 135);
             this.textBoxVolume2.Name = "textBoxVolume2";
-            this.textBoxVolume2.Size = new System.Drawing.Size(94, 26);
+            this.textBoxVolume2.Size = new System.Drawing.Size(98, 26);
             this.textBoxVolume2.TabIndex = 19;
             // 
             // textBoxVolume3
             // 
             this.textBoxVolume3.Enabled = false;
-            this.textBoxVolume3.Location = new System.Drawing.Point(430, 298);
+            this.textBoxVolume3.Location = new System.Drawing.Point(420, 207);
             this.textBoxVolume3.Name = "textBoxVolume3";
-            this.textBoxVolume3.Size = new System.Drawing.Size(94, 26);
+            this.textBoxVolume3.Size = new System.Drawing.Size(98, 26);
             this.textBoxVolume3.TabIndex = 20;
             // 
             // textBoxValue2
             // 
             this.textBoxValue2.Enabled = false;
-            this.textBoxValue2.Location = new System.Drawing.Point(642, 220);
+            this.textBoxValue2.Location = new System.Drawing.Point(606, 135);
             this.textBoxValue2.Name = "textBoxValue2";
-            this.textBoxValue2.Size = new System.Drawing.Size(86, 26);
+            this.textBoxValue2.Size = new System.Drawing.Size(90, 26);
             this.textBoxValue2.TabIndex = 21;
             // 
             // textBoxValue3
             // 
             this.textBoxValue3.Enabled = false;
-            this.textBoxValue3.Location = new System.Drawing.Point(633, 298);
+            this.textBoxValue3.Location = new System.Drawing.Point(606, 207);
             this.textBoxValue3.Name = "textBoxValue3";
             this.textBoxValue3.Size = new System.Drawing.Size(90, 26);
             this.textBoxValue3.TabIndex = 22;
             // 
             // textBoxAmountBS
             // 
-            this.textBoxAmountBS.Location = new System.Drawing.Point(351, 523);
+            this.textBoxAmountBS.Location = new System.Drawing.Point(322, 89);
             this.textBoxAmountBS.Name = "textBoxAmountBS";
-            this.textBoxAmountBS.Size = new System.Drawing.Size(68, 26);
+            this.textBoxAmountBS.Size = new System.Drawing.Size(97, 26);
             this.textBoxAmountBS.TabIndex = 23;
             // 
             // textBoxValueBS
             // 
             this.textBoxValueBS.Enabled = false;
-            this.textBoxValueBS.Location = new System.Drawing.Point(480, 523);
+            this.textBoxValueBS.Location = new System.Drawing.Point(620, 91);
             this.textBoxValueBS.Name = "textBoxValueBS";
-            this.textBoxValueBS.Size = new System.Drawing.Size(68, 26);
+            this.textBoxValueBS.Size = new System.Drawing.Size(93, 26);
             this.textBoxValueBS.TabIndex = 24;
             // 
             // timerExchange
@@ -293,54 +309,48 @@
             // 
             // listBoxExchange
             // 
+            this.listBoxExchange.BackColor = System.Drawing.Color.LightGray;
+            this.listBoxExchange.Font = new System.Drawing.Font("Curlz MT", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxExchange.FormattingEnabled = true;
-            this.listBoxExchange.ItemHeight = 20;
+            this.listBoxExchange.ItemHeight = 27;
             this.listBoxExchange.Items.AddRange(new object[] {
             "Ticker1",
             "Ticker2",
             "Ticker3"});
-            this.listBoxExchange.Location = new System.Drawing.Point(82, 509);
+            this.listBoxExchange.Location = new System.Drawing.Point(27, 32);
             this.listBoxExchange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxExchange.Name = "listBoxExchange";
-            this.listBoxExchange.Size = new System.Drawing.Size(139, 64);
+            this.listBoxExchange.Size = new System.Drawing.Size(139, 112);
             this.listBoxExchange.TabIndex = 25;
             // 
             // labelRovn
             // 
             this.labelRovn.AutoSize = true;
-            this.labelRovn.Location = new System.Drawing.Point(442, 528);
+            this.labelRovn.BackColor = System.Drawing.Color.Transparent;
+            this.labelRovn.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRovn.Location = new System.Drawing.Point(426, 83);
             this.labelRovn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRovn.Name = "labelRovn";
-            this.labelRovn.Size = new System.Drawing.Size(18, 20);
+            this.labelRovn.Size = new System.Drawing.Size(36, 32);
             this.labelRovn.TabIndex = 26;
-            this.labelRovn.Text = "=";
+            this.labelRovn.Text = "→";
             // 
             // textBoxSum
             // 
             this.textBoxSum.Enabled = false;
-            this.textBoxSum.Location = new System.Drawing.Point(618, 378);
+            this.textBoxSum.Location = new System.Drawing.Point(917, 308);
             this.textBoxSum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSum.Name = "textBoxSum";
             this.textBoxSum.Size = new System.Drawing.Size(114, 26);
             this.textBoxSum.TabIndex = 27;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(591, 342);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 20);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "_________________";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // buttonDetails1
             // 
-            this.buttonDetails1.Location = new System.Drawing.Point(768, 142);
+            this.buttonDetails1.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDetails1.Location = new System.Drawing.Point(748, 52);
             this.buttonDetails1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDetails1.Name = "buttonDetails1";
-            this.buttonDetails1.Size = new System.Drawing.Size(82, 35);
+            this.buttonDetails1.Size = new System.Drawing.Size(111, 42);
             this.buttonDetails1.TabIndex = 29;
             this.buttonDetails1.Text = "Details";
             this.buttonDetails1.UseVisualStyleBackColor = true;
@@ -348,10 +358,11 @@
             // 
             // buttonDetails2
             // 
-            this.buttonDetails2.Location = new System.Drawing.Point(768, 217);
+            this.buttonDetails2.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDetails2.Location = new System.Drawing.Point(748, 124);
             this.buttonDetails2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDetails2.Name = "buttonDetails2";
-            this.buttonDetails2.Size = new System.Drawing.Size(82, 35);
+            this.buttonDetails2.Size = new System.Drawing.Size(111, 42);
             this.buttonDetails2.TabIndex = 30;
             this.buttonDetails2.Text = "Details";
             this.buttonDetails2.UseVisualStyleBackColor = true;
@@ -359,63 +370,127 @@
             // 
             // buttonDetails3
             // 
-            this.buttonDetails3.Location = new System.Drawing.Point(768, 295);
+            this.buttonDetails3.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDetails3.Location = new System.Drawing.Point(748, 196);
             this.buttonDetails3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDetails3.Name = "buttonDetails3";
-            this.buttonDetails3.Size = new System.Drawing.Size(82, 35);
+            this.buttonDetails3.Size = new System.Drawing.Size(111, 43);
             this.buttonDetails3.TabIndex = 31;
             this.buttonDetails3.Text = "Details";
             this.buttonDetails3.UseVisualStyleBackColor = true;
             this.buttonDetails3.Click += new System.EventHandler(this.buttonDetails3_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labelRovn);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.listBoxExchange);
+            this.panel1.Controls.Add(this.textBoxValueBS);
+            this.panel1.Controls.Add(this.textBoxAmountBS);
+            this.panel1.Controls.Add(this.buttonBuySell);
+            this.panel1.Controls.Add(this.labelValueBS);
+            this.panel1.Controls.Add(this.labelAmountBS);
+            this.panel1.Controls.Add(this.radioButtonSell);
+            this.panel1.Controls.Add(this.radioButtonBuy);
+            this.panel1.Location = new System.Drawing.Point(10, 430);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1035, 172);
+            this.panel1.TabIndex = 32;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(893, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 95);
+            this.button1.TabIndex = 27;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(467, 37);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 100);
+            this.button2.TabIndex = 28;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(577, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 32);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "→";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.textBoxBalance);
+            this.panel2.Controls.Add(this.labelBalance);
+            this.panel2.Location = new System.Drawing.Point(752, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(283, 60);
+            this.panel2.TabIndex = 33;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Controls.Add(this.buttonDetails3);
+            this.panel3.Controls.Add(this.buttonDetails2);
+            this.panel3.Controls.Add(this.buttonDetails1);
+            this.panel3.Controls.Add(this.textBoxSum);
+            this.panel3.Controls.Add(this.textBoxValue3);
+            this.panel3.Controls.Add(this.textBoxValue2);
+            this.panel3.Controls.Add(this.textBoxVolume3);
+            this.panel3.Controls.Add(this.textBoxVolume2);
+            this.panel3.Controls.Add(this.textBoxPrice3);
+            this.panel3.Controls.Add(this.textBoxPrice2);
+            this.panel3.Controls.Add(this.labelTicker3);
+            this.panel3.Controls.Add(this.labelTicker2);
+            this.panel3.Controls.Add(this.textBoxValue1);
+            this.panel3.Controls.Add(this.textBoxVolume1);
+            this.panel3.Controls.Add(this.textBoxPrice1);
+            this.panel3.Controls.Add(this.labelTicker1);
+            this.panel3.Controls.Add(this.labelVolume);
+            this.panel3.Controls.Add(this.labelValue);
+            this.panel3.Controls.Add(this.labelPrice);
+            this.panel3.Location = new System.Drawing.Point(10, 81);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1035, 339);
+            this.panel3.TabIndex = 34;
+            // 
             // Exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 612);
-            this.Controls.Add(this.buttonDetails3);
-            this.Controls.Add(this.buttonDetails2);
-            this.Controls.Add(this.buttonDetails1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxSum);
-            this.Controls.Add(this.labelRovn);
-            this.Controls.Add(this.listBoxExchange);
-            this.Controls.Add(this.textBoxValueBS);
-            this.Controls.Add(this.textBoxAmountBS);
-            this.Controls.Add(this.textBoxValue3);
-            this.Controls.Add(this.textBoxValue2);
-            this.Controls.Add(this.textBoxVolume3);
-            this.Controls.Add(this.textBoxVolume2);
-            this.Controls.Add(this.textBoxPrice3);
-            this.Controls.Add(this.textBoxPrice2);
-            this.Controls.Add(this.labelTicker3);
-            this.Controls.Add(this.labelTicker2);
-            this.Controls.Add(this.buttonBuySell);
-            this.Controls.Add(this.labelValueBS);
-            this.Controls.Add(this.labelAmountBS);
-            this.Controls.Add(this.radioButtonSell);
-            this.Controls.Add(this.radioButtonBuy);
-            this.Controls.Add(this.textBoxBalance);
-            this.Controls.Add(this.textBoxValue1);
-            this.Controls.Add(this.textBoxVolume1);
-            this.Controls.Add(this.textBoxPrice1);
-            this.Controls.Add(this.labelTicker1);
-            this.Controls.Add(this.labelBalance);
-            this.Controls.Add(this.labelVolume);
-            this.Controls.Add(this.labelValue);
-            this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.labelTicker);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(1057, 612);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Exchange";
             this.Text = "Exchange";
             this.Load += new System.EventHandler(this.Exchange_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelTicker;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelValue;
         private System.Windows.Forms.Label labelVolume;
@@ -444,9 +519,14 @@
         public System.Windows.Forms.Timer timerExchange;
         private System.Windows.Forms.Label labelRovn;
         private System.Windows.Forms.TextBox textBoxSum;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonDetails1;
         private System.Windows.Forms.Button buttonDetails2;
         private System.Windows.Forms.Button buttonDetails3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
