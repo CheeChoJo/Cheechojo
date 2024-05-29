@@ -20,7 +20,7 @@ namespace Client_side_form
         static double volume1 = 1;
         static double volume2 = 2;
         static double volume3 = 3;
-        static double balance = 150;
+        static double balanceOperative = 150;
         static int buySell;
         static double Amount;
         static double valueBS;
@@ -74,7 +74,7 @@ namespace Client_side_form
             textBoxValue1.Text = Convert.ToString(price1 * volume1) + " €";
             textBoxValue2.Text = Convert.ToString(price2 * volume2) + " €";
             textBoxValue3.Text = Convert.ToString(price3 * volume3) + " €";
-            textBoxBalance.Text = Convert.ToString(balance) + " €";
+            textBoxBalance.Text = Convert.ToString(balanceOperative) + " €";
             textBoxSum.Text = Convert.ToString(price1*volume1 + price2*volume2+price3*volume3) + " €";
             int update = rnd.Next(1, 4);
             switch (update)
@@ -157,7 +157,7 @@ namespace Client_side_form
                 case 0:
                     if (buySell == 1)
                     {
-                        if (balance < valueBS)
+                        if (balanceOperative < valueBS)
                         {
                             MessageBox.Show("Na vašem investičním účtě nemáte dostatek prostředků.");
                         }
@@ -181,14 +181,14 @@ namespace Client_side_form
                 case 1:
                     if (buySell== 1)
                     {
-                        if (balance < valueBS)
+                        if (balanceOperative < valueBS)
                         {
                             MessageBox.Show("Na vašem investičním účtě nemáte dostatek prostředků.");
                         }
                         else
                         {
                             volume2 += Amount;
-                            balance -= valueBS;
+                            balanceOperative -= valueBS;
                         }
                     }
                     else
@@ -200,21 +200,21 @@ namespace Client_side_form
                         else
                         {
                             volume2 -= Amount;
-                            balance += valueBS;
+                            balanceOperative += valueBS;
                         }
                     }
                     break;
                 case 2:
                     if (buySell== 1)
                     {
-                        if (balance < valueBS)
+                        if (balanceOperative < valueBS)
                         {
                             MessageBox.Show("Na vašem investičním účtě nemáte dostatek prostředků.");
                         }
                         else
                         {
                             volume3 += Amount;
-                            balance -= valueBS;
+                            balanceOperative -= valueBS;
                         }
                     }
                     else
@@ -226,14 +226,14 @@ namespace Client_side_form
                         else
                         {
                             volume3 -= Amount;
-                            balance += valueBS;
+                            balanceOperative += valueBS;
                         }
                     }
                     break;
                 default:
                     break;
             }
-            textBoxBalance.Text = balance.ToString() + " €";
+            textBoxBalance.Text = balanceOperative.ToString() + " €";
         }
 
         private void radioButtonBuy_CheckedChanged(object sender, EventArgs e)
@@ -287,3 +287,4 @@ namespace Client_side_form
 }
 //komentuju hihi
 //cermakovi blbne git
+//už zase 
