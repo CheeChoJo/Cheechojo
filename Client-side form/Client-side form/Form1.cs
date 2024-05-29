@@ -12,11 +12,11 @@ namespace Client_side_form
 {
     public partial class CheeChoJoClient : Form
     {
-        private User user;
+        private _Account account;
         public CheeChoJoClient()
         {
             InitializeComponent();
-            user = new User();
+            account = new _Account();
         }
 
         private void CheeChoJoClient_Load(object sender, EventArgs e)
@@ -26,15 +26,16 @@ namespace Client_side_form
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            Form LogIn = new LogIn();
-            LogIn.User = user;
+            LogIn LogIn = new LogIn();
+            LogIn.account = account;
             LogIn.Show();
             this.Hide();
         }
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            Form SignIn = new SignIn();
+            SignIn SignIn = new SignIn();
+            SignIn.account = account;
             SignIn.Show();
             this.Hide();
         }

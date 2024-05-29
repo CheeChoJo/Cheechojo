@@ -25,7 +25,7 @@ namespace Client_side_form
         static double Amount;
         static double valueBS;
         static Random rnd = new Random();
-        static User user = new User();
+        public _Account account = new _Account();
         public Exchange()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace Client_side_form
 
         private async void BuySell()
         {
-            MessageBox.Show(user.userName);
+            MessageBox.Show(account.userName);
             using (var client = new HttpClient())
             {
                 var response = await client.GetAsync("http://192.168.0.167:7142/");
@@ -43,7 +43,7 @@ namespace Client_side_form
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     string output = JsonConvert.SerializeObject(content);
-                    User deserializedProduct = JsonConvert.DeserializeObject<User>(output);
+                    _Account deserializedProduct = JsonConvert.DeserializeObject<_Account>(output);
                     MessageBox.Show(Convert.ToString(deserializedProduct));
                     switch (buySell)
                     {
@@ -127,6 +127,7 @@ namespace Client_side_form
 
         private void buttonBuySell_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Convert.ToString(account.userName));
             //nakupovací okénko
             if (double.TryParse(textBoxAmountBS.Text, out Amount))
             {
@@ -286,3 +287,4 @@ namespace Client_side_form
     }
 }
 //komentuju hihi
+//cermakovi blbne git

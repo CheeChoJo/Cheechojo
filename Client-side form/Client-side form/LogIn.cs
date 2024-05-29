@@ -14,7 +14,7 @@ namespace Client_side_form
 {
     public partial class LogIn : Form
     {
-        public User user { get; set; }
+        public _Account account { get; set; }
         public LogIn()
         {
             InitializeComponent();
@@ -45,8 +45,9 @@ namespace Client_side_form
                 string filePassword = File.ReadAllText(filePath);
                 if (filePassword == logPassword)//nastaví username proměnnou ve třídě User na to co teď zadal user k přihlášení (logName) a otevře exchange form 
                 {
-                    user.userName = logName;
-                    Form Exchange = new Exchange();
+                    account.userName = logName;
+                    Exchange Exchange = new Exchange();
+                    Exchange.account = account;
                     Exchange.Show();
                     this.Hide();
                 }//no tak jsem čurák no

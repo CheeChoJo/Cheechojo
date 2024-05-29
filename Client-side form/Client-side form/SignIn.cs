@@ -13,6 +13,7 @@ namespace Client_side_form
 {
     public partial class SignIn : Form
     {
+        public _Account account = new _Account();
         public SignIn()
         {
             InitializeComponent();
@@ -35,19 +36,21 @@ namespace Client_side_form
             }
             else
             {
-                if (signPassword != signRepeat)
-                {
-                    MessageBox.Show("Passwords must match");
-                }
-                else 
+                if (signPassword == signRepeat)
                 {
                     using (StreamWriter writer = new StreamWriter(filePath))
                     {
+
                         writer.Write(signPassword);
-                        Form Exchange = new Exchange();
+                        Exchange Exchange = new Exchange();
+                        Exchange.account = account;
                         Exchange.Show();
                         this.Hide();
                     }
+                }
+                else 
+                {
+                    MessageBox.Show("Passwords must match");
                 }
             }
         }

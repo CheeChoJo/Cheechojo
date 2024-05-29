@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Client_side_form
 {
-    public class User
+    public class _Account
     {
         public string userName { get; set; }
         public int balance { get; set; }

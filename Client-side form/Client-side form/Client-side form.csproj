@@ -99,7 +99,7 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="_Account.cs" />
     <EmbeddedResource Include="Details1.resx">
       <DependentUpon>Details1.cs</DependentUpon>
     </EmbeddedResource>
