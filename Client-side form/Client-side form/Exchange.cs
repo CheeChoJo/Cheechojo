@@ -41,10 +41,10 @@ namespace Client_side_form
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    _Account deserialisedProduct = JsonConvert.DeserializeObject<_Account>(content);
-                    string output = JsonConvert.SerializeObject(deserialisedProduct);
-                   
-                    MessageBox.Show(Convert.ToString(output));
+                    account = JsonConvert.DeserializeObject<_Account>(content);
+                    //string output = JsonConvert.SerializeObject(deserialisedProduct);
+                    MessageBox.Show(Convert.ToString(account.balance));                            //test deserializace
+                    balance = account.balance;
                     switch (buySell)
                     {
                         case 0: //sell
