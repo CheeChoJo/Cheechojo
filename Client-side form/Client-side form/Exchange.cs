@@ -41,9 +41,10 @@ namespace Client_side_form
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    string output = JsonConvert.SerializeObject(content);
-                    _Account deserializedProduct = JsonConvert.DeserializeObject<_Account>(output);
-                    MessageBox.Show(Convert.ToString(deserializedProduct));
+                    _Account deserialisedProduct = JsonConvert.DeserializeObject<_Account>(content);
+                    string output = JsonConvert.SerializeObject(deserialisedProduct);
+                   
+                    MessageBox.Show(Convert.ToString(output));
                     switch (buySell)
                     {
                         case 0: //sell
