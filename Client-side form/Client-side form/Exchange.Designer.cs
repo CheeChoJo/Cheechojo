@@ -108,7 +108,7 @@
             // 
             this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBalance.Location = new System.Drawing.Point(3, 17);
+            this.labelBalance.Location = new System.Drawing.Point(14, 23);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.Size = new System.Drawing.Size(101, 30);
             this.labelBalance.TabIndex = 4;
@@ -151,7 +151,7 @@
             // textBoxBalance
             // 
             this.textBoxBalance.Enabled = false;
-            this.textBoxBalance.Location = new System.Drawing.Point(99, 23);
+            this.textBoxBalance.Location = new System.Drawing.Point(118, 23);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(126, 26);
             this.textBoxBalance.TabIndex = 9;
@@ -235,9 +235,9 @@
             this.labelTicker3.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTicker3.Location = new System.Drawing.Point(106, 201);
             this.labelTicker3.Name = "labelTicker3";
-            this.labelTicker3.Size = new System.Drawing.Size(98, 30);
+            this.labelTicker3.Size = new System.Drawing.Size(54, 30);
             this.labelTicker3.TabIndex = 16;
-            this.labelTicker3.Text = "Ticker3";
+            this.labelTicker3.Text = "BJB";
             // 
             // textBoxPrice2
             // 
@@ -311,18 +311,19 @@
             // 
             // listBoxExchange
             // 
-            this.listBoxExchange.BackColor = System.Drawing.Color.LightGray;
+            this.listBoxExchange.BackColor = System.Drawing.Color.Pink;
+            this.listBoxExchange.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxExchange.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxExchange.FormattingEnabled = true;
             this.listBoxExchange.ItemHeight = 30;
             this.listBoxExchange.Items.AddRange(new object[] {
-            "Ticker1",
-            "Ticker2",
-            "Ticker3"});
+            "BKR",
+            "STW",
+            "BJB"});
             this.listBoxExchange.Location = new System.Drawing.Point(27, 32);
             this.listBoxExchange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxExchange.Name = "listBoxExchange";
-            this.listBoxExchange.Size = new System.Drawing.Size(139, 94);
+            this.listBoxExchange.Size = new System.Drawing.Size(139, 90);
             this.listBoxExchange.TabIndex = 25;
             // 
             // labelRovn
@@ -348,6 +349,8 @@
             // 
             // buttonDetails1
             // 
+            this.buttonDetails1.BackColor = System.Drawing.Color.Pink;
+            this.buttonDetails1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDetails1.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDetails1.Location = new System.Drawing.Point(748, 52);
             this.buttonDetails1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -355,11 +358,13 @@
             this.buttonDetails1.Size = new System.Drawing.Size(111, 42);
             this.buttonDetails1.TabIndex = 29;
             this.buttonDetails1.Text = "Details";
-            this.buttonDetails1.UseVisualStyleBackColor = true;
+            this.buttonDetails1.UseVisualStyleBackColor = false;
             this.buttonDetails1.Click += new System.EventHandler(this.buttonDetails1_Click);
             // 
             // buttonDetails2
             // 
+            this.buttonDetails2.BackColor = System.Drawing.Color.Pink;
+            this.buttonDetails2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDetails2.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDetails2.Location = new System.Drawing.Point(748, 124);
             this.buttonDetails2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -367,11 +372,13 @@
             this.buttonDetails2.Size = new System.Drawing.Size(111, 42);
             this.buttonDetails2.TabIndex = 30;
             this.buttonDetails2.Text = "Details";
-            this.buttonDetails2.UseVisualStyleBackColor = true;
+            this.buttonDetails2.UseVisualStyleBackColor = false;
             this.buttonDetails2.Click += new System.EventHandler(this.buttonDetails2_Click);
             // 
             // buttonDetails3
             // 
+            this.buttonDetails3.BackColor = System.Drawing.Color.Pink;
+            this.buttonDetails3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDetails3.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDetails3.Location = new System.Drawing.Point(748, 196);
             this.buttonDetails3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -379,7 +386,7 @@
             this.buttonDetails3.Size = new System.Drawing.Size(111, 43);
             this.buttonDetails3.TabIndex = 31;
             this.buttonDetails3.Text = "Details";
-            this.buttonDetails3.UseVisualStyleBackColor = true;
+            this.buttonDetails3.UseVisualStyleBackColor = false;
             this.buttonDetails3.Click += new System.EventHandler(this.buttonDetails3_Click);
             // 
             // panel1
@@ -439,15 +446,15 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.textBoxBalance);
             this.panel2.Controls.Add(this.labelBalance);
-            this.panel2.Location = new System.Drawing.Point(721, 15);
+            this.panel2.Location = new System.Drawing.Point(707, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 72);
+            this.panel2.Size = new System.Drawing.Size(328, 72);
             this.panel2.TabIndex = 33;
             // 
             // button3
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(239, 3);
+            this.button3.Location = new System.Drawing.Point(253, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 66);
             this.button3.TabIndex = 10;
