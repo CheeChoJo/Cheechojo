@@ -35,10 +35,9 @@ namespace Client_side_form
 
         private async void BuySell()
         {
-            MessageBox.Show(account.userName);
             using (var client = new HttpClient())
             {
-                var response = await client.GetAsync("http://192.168.0.167:7142/");
+                var response = await client.GetAsync("http://194.108.31.75:7142");
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
@@ -127,7 +126,6 @@ namespace Client_side_form
 
         private void buttonBuySell_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Convert.ToString(account.userName));
             //nakupovací okénko
             if (double.TryParse(textBoxAmountBS.Text, out Amount))
             {

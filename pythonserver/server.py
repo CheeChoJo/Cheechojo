@@ -39,7 +39,7 @@ def get_data():
 
         return jsonify(data)
         
-@app.route('/new-user', methods='POST')
+@app.route('/new-user', methods=["POST"])
 def newuser():
     data = request.get_json() #veme json a hodi to do data
     file_name = data.get('accountName')+'.json'
