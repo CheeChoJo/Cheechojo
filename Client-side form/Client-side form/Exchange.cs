@@ -37,29 +37,47 @@ namespace Client_side_form
         {
             using (var client = new HttpClient())
             {
-                var response = await client.GetAsync("http://194.108.31.75:7142");
-                if (response.IsSuccessStatusCode)
+                var url = "http://194.108.31.75:7142/change";
+                var dataToSend = new
                 {
-                    var content = await response.Content.ReadAsStringAsync();
-                    account = JsonConvert.DeserializeObject<_Account>(content);
-                    //string output = JsonConvert.SerializeObject(deserialisedProduct);
-                    MessageBox.Show(Convert.ToString(account.balance));                            //test deserializace
-                    balance = account.balance;
-                    switch (buySell)
+                    accountName = account.userName,
+                    buySell = buySell,
+                    volume1 = volume1,
+                    volume2 = volume2,
+                    volume3 = volume3,
+                };
+                var json = JsonConvert.SerializeObject(dataToSend);
+                var content = new StringContent(json, Encoding.UTF8, account.userName + ".json");
+                HttpResponseMessage response = null;
+                try
+                {
+                    response = await client.PostAsync(url, content);
+                    if (response.IsSuccessStatusCode)
                     {
-                        case 0: //sell
-                            
-                            break;
-                        case 1: //buy
-                            break;
-                        default:
-                            break;
-                    }                    
+                        switch (buySell)
+                        {
+                            case 0: // sell
+                                    // Implementujte logiku pro prodej zde
+                                break;
+                            case 1: // buy
+                                var responseContent = await response.Content.ReadAsStringAsync();
+                                account = JsonConvert.DeserializeObject<_Account>(responseContent);
+                                MessageBox.Show(Convert.ToString(account.balance));
+                                balanceOperative = account.balance;
+                                break;
+                            default:
+                                MessageBox.Show("1Di0T error");
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("PEBCAK Error!!!");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("PEBCAK Error!!!");
-                    //System.Diagnostics.Process.Start("Shutdown", "-s -t 10");
+                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
                 }
             }
         }

@@ -46,7 +46,7 @@ def newuser():
     with open(file_name, 'w') as account_file: #vytvori novej file 
         json.dump(data, account_file)
 
-@app.route('/change')
+@app.route('/change', methods=['POST', 'GET'])
 def change():
     data = request.get_json()
     try: #pokud existuje soubor
