@@ -47,7 +47,7 @@ namespace Client_side_form
                     volume3 = volume3,
                 };
                 var json = JsonConvert.SerializeObject(dataToSend);
-                var content = new StringContent(json, Encoding.UTF8, account.userName + ".json");
+                var content = new StringContent(json, Encoding.UTF8, "application/json"); //tohle bylo zmeneno experimentalne originally to bylo accountNsmr + ".json"
                 HttpResponseMessage response = null;
                 try
                 {
