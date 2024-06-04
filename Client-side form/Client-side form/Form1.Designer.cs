@@ -47,8 +47,9 @@
             // 
             // buttonLogIn
             // 
-            this.buttonLogIn.BackColor = System.Drawing.Color.DimGray;
-            this.buttonLogIn.Font = new System.Drawing.Font("Ebrima", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonLogIn.BackColor = System.Drawing.Color.DeepPink;
+            this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogIn.Font = new System.Drawing.Font("Bradley Hand ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogIn.ForeColor = System.Drawing.Color.White;
             this.buttonLogIn.Location = new System.Drawing.Point(220, 324);
             this.buttonLogIn.Name = "buttonLogIn";
@@ -60,8 +61,9 @@
             // 
             // buttonSignUp
             // 
-            this.buttonSignUp.BackColor = System.Drawing.Color.DimGray;
-            this.buttonSignUp.Font = new System.Drawing.Font("Ebrima", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSignUp.BackColor = System.Drawing.Color.DeepPink;
+            this.buttonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSignUp.Font = new System.Drawing.Font("Bradley Hand ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignUp.ForeColor = System.Drawing.Color.White;
             this.buttonSignUp.Location = new System.Drawing.Point(220, 430);
             this.buttonSignUp.Name = "buttonSignUp";
@@ -75,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightPink;
             this.ClientSize = new System.Drawing.Size(878, 744);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.buttonLogIn);
