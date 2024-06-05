@@ -45,6 +45,7 @@ def newuser():
     file_name = data.get('accountName')+'.json'
     with open(file_name, 'w') as account_file: #vytvori novej file 
         json.dump(data, account_file)
+    return '', 201
 
 @app.route('/change', methods=['POST', 'GET'])
 def change():

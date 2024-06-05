@@ -17,12 +17,12 @@ namespace Client_side_form
         static double price1 = 10;
         static double price2 = 20;
         static double price3 = 30;
-        static double volume1 = 1;
-        static double volume2 = 2;
-        static double volume3 = 3;
+        static int volume1 = 1;
+        static int volume2 = 2;
+        static int volume3 = 3;
         static double balanceOperative = 150;
         static int buySell;
-        static double Amount;
+        static int Amount;
         static double valueBS;
         static Random rnd = new Random();
         public _Account account = new _Account();
@@ -118,7 +118,7 @@ namespace Client_side_form
         {
             //testovací hodnoty, jednotlivým proměnám poté přiřadíme co stáhenme ze serveru
             //základní tabulka            
-            if(double.TryParse(textBoxAmountBS.Text, out Amount)) //řeší, když je Amount prázdný po zapnutí
+            if(Int32.TryParse(textBoxAmountBS.Text, out Amount)) //řeší, když je Amount prázdný po zapnutí
             {
                 switch (listBoxExchange.SelectedIndex)
                 {
@@ -146,7 +146,7 @@ namespace Client_side_form
         private void buttonBuySell_Click(object sender, EventArgs e)
         {
             //nakupovací okénko
-            if (double.TryParse(textBoxAmountBS.Text, out Amount))
+            if (Int32.TryParse(textBoxAmountBS.Text, out Amount))
             {
                 switch (listBoxExchange.SelectedIndex)
                 {

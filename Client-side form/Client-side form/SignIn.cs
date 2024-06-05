@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Client_side_form
 {
@@ -39,9 +40,10 @@ namespace Client_side_form
             {
                 if (signPassword == signRepeat)
                 {
+                    account.userName = signName;
                     using (var client = new HttpClient())
                     {
-                        var url = "http://172.16.1.44:7142/new-user";
+                        var url = "http://194.108.31.75:7142/new-user";
                         var dataToSend = new
                         {
                             accountName = account.userName,
@@ -49,7 +51,7 @@ namespace Client_side_form
                             balance = account.balance,
                         };
                         var json = JsonConvert.SerializeObject(dataToSend);
-                        var content = new StringContent(json, Encoding.UTF8, account.userName);
+                        var content = new StringContent(json, Encoding.UTF8, "application/json");
                         HttpResponseMessage response = null;
                         try
                         {
