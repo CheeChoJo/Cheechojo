@@ -34,12 +34,8 @@ namespace Client_side_form
             string signPassword = Convert.ToString(textBoxSignPass1.Text);
             string signRepeat = Convert.ToString(textBoxSignPass2.Text);
             string filePath = "C:\\Users\\Public\\Documents\\" + signName + ".txt";
-            if (File.Exists(filePath)) 
-            {
-                MessageBox.Show("Such user already exists, please choose a different username.");
-            }
-            else
-            {
+            //nutno tady zajistit handleing pro user already exists!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            
                 if (signPassword == signRepeat)
                 {
                     account.userName = signName;
@@ -50,7 +46,10 @@ namespace Client_side_form
                         {
                             accountName = account.userName,
                             password = signPassword,
-                            balance = account.balance,
+                            balance = 150,
+                            volume1 = 0,
+                            volume2 = 0,
+                            volume3 = 0,
                         };
                         var json = JsonConvert.SerializeObject(dataToSend);
                         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -60,7 +59,8 @@ namespace Client_side_form
                             response = await client.PostAsync(url, content);
                             if (response.IsSuccessStatusCode)
                             {
-                                account.userName = signName;
+                                var responseContent = await response.Content.ReadAsStringAsync();
+                                account = JsonConvert.DeserializeObject<_Account>(responseContent);
                                 Exchange Exchange = new Exchange();
                                 Exchange.account = account;
                                 Exchange.Show();
@@ -81,7 +81,7 @@ namespace Client_side_form
                 {
                     MessageBox.Show("Passwords must match");
                 }
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
