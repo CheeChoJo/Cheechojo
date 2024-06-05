@@ -17,9 +17,11 @@ namespace Client_side_form
     public partial class SignIn : Form
     {
         public _Account account = new _Account();
-        public SignIn()
+        private CheeChoJoClient previousForm;
+        public SignIn(CheeChoJoClient form)
         {
             InitializeComponent();
+            previousForm = form;
         }
         private void SignIn_Load(object sender, EventArgs e)
         {
@@ -80,6 +82,12 @@ namespace Client_side_form
                     MessageBox.Show("Passwords must match");
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Close();
         }
     }
 }

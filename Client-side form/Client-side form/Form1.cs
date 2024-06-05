@@ -26,7 +26,7 @@ namespace Client_side_form
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            LogIn LogIn = new LogIn();
+            LogIn LogIn = new LogIn(this);
             LogIn.account = account;
             LogIn.Show();
             this.Hide();
@@ -34,7 +34,7 @@ namespace Client_side_form
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            SignIn SignIn = new SignIn();
+            SignIn SignIn = new SignIn(this);
             SignIn.account = account;
             SignIn.Show();
             this.Hide();

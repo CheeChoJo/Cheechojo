@@ -15,9 +15,11 @@ namespace Client_side_form
     public partial class LogIn : Form
     {
         public _Account account { get; set; }
-        public LogIn()
+        private CheeChoJoClient previousForm;
+        public LogIn(CheeChoJoClient form)
         {
             InitializeComponent();
+            previousForm = form;
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -56,6 +58,12 @@ namespace Client_side_form
                     MessageBox.Show("Wrong password!");
                 }
             }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Close();
         }
     }
 }

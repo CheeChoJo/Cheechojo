@@ -94,6 +94,7 @@ namespace Client_side_form
             textBoxValue3.Text = Convert.ToString(price3 * volume3) + " €";
             textBoxBalance.Text = Convert.ToString(balanceOperative) + " €";
             textBoxSum.Text = Convert.ToString(price1*volume1 + price2*volume2+price3*volume3) + " €";
+            textBoxUser.Text = Convert.ToString(account.userName);
             int update = rnd.Next(1, 4);
             switch (update)
             {
