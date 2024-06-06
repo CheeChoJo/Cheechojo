@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace Client_side_form
 {
@@ -27,7 +29,7 @@ namespace Client_side_form
 
         }
 
-        private void buttonLogIn2_Click(object sender, EventArgs e)
+        public async void buttonLogIn2_Click(object sender, EventArgs e)
         {
             //uložit username a password
             //if username existuje? (najdeme txt file?)
@@ -35,27 +37,41 @@ namespace Client_side_form
             //      pokud ano - if pass matchuje?
             //              pokud ne - hodíme nematchuje pass error
             //              pokud ano - otevřeme exchange.cs
+            ///////////////
             string logName = Convert.ToString(textBoxLogName.Text);
             string logPassword = Convert.ToString(textBoxLogPass.Text);
-            string filePath = "C:\\Users\\Public\\Documents\\" + logName + ".txt";
-            if (File.Exists(filePath) == false)
+            using (var client = new HttpClient())
             {
-                MessageBox.Show("No such user exists!");
-            }
-            else
-            {
-                string filePassword = File.ReadAllText(filePath);
-                if (filePassword == logPassword)//nastaví username proměnnou ve třídě User na to co teď zadal user k přihlášení (logName) a otevře exchange form 
+                var url = "http://194.108.31.75:7142/login";
+                var dataToSend = new
                 {
-                    account.userName = logName;
-                    Exchange Exchange = new Exchange();
-                    Exchange.account = account;
-                    Exchange.Show();
-                    this.Hide();
-                }//no tak jsem čurák no
-                else
+                    userName = account.userName,
+                    password = logPassword,
+                };
+                var json = JsonConvert.SerializeObject(dataToSend);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = null;
+                try
                 {
-                    MessageBox.Show("Wrong password!");
+                    response = await client.PostAsync(url, content);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        account = JsonConvert.DeserializeObject<_Account>(responseContent);
+                        MessageBox.Show(Convert.ToString(account.balance));
+                        Exchange Exchange = new Exchange();
+                        Exchange.account = account;
+                        Exchange.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("PEBCAK Error!!!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
                 }
             }
         }

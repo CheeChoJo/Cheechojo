@@ -33,55 +33,81 @@ namespace Client_side_form
             string signName = Convert.ToString(textBoxSignName.Text);
             string signPassword = Convert.ToString(textBoxSignPass1.Text);
             string signRepeat = Convert.ToString(textBoxSignPass2.Text);
-            string filePath = "C:\\Users\\Public\\Documents\\" + signName + ".txt";
-            //nutno tady zajistit handleing pro user already exists!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            
-                if (signPassword == signRepeat)
+            if (signPassword == signRepeat)
+            {
+                using (var client = new HttpClient())
                 {
-                    account.userName = signName;
-                    using (var client = new HttpClient())
+                    var url = "http://194.108.31.75:7142/login";
+                    var dataToSend1 = new
                     {
-                        var url = "http://194.108.31.75:7142/new-user";
-                        var dataToSend = new
+                        accountName = account.userName,
+                        password = signPassword,
+                    };
+                    var json = JsonConvert.SerializeObject(dataToSend1);
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = null;
+                    try
+                    {
+                        response = await client.PostAsync(url, content);
+                        if (response.IsSuccessStatusCode)
                         {
-                            accountName = account.userName,
-                            password = signPassword,
-                            balance = 150,
-                            volume1 = 0,
-                            volume2 = 0,
-                            volume3 = 0,
-                        };
-                        var json = JsonConvert.SerializeObject(dataToSend);
-                        var content = new StringContent(json, Encoding.UTF8, "application/json");
-                        HttpResponseMessage response = null;
-                        try
-                        {
-                            response = await client.PostAsync(url, content);
-                            if (response.IsSuccessStatusCode)
-                            {
-                                var responseContent = await response.Content.ReadAsStringAsync();
-                                account = JsonConvert.DeserializeObject<_Account>(responseContent);
-                                Exchange Exchange = new Exchange();
-                                Exchange.account = account;
-                                Exchange.Show();
-                                this.Hide();
-                            }
-                            else
-                            {
-                                MessageBox.Show("PEBCAK Error!!!");
-                            }
+                            MessageBox.Show("Such user already exists! Please choose another username.");
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show($"Došlo k chybě: {ex.Message}");
+                            response = null;
+                            account.userName = signName;
+                            using (client)
+                            {
+
+                                var dataToSend2 = new
+                                {
+                                    userName = account.userName,
+                                    password = signPassword,
+                                    balance = 150,
+                                    volume1 = 0,
+                                    volume2 = 0,
+                                    volume3 = 0,
+                                };
+                                url = "http://194.108.31.75:7142/new-user";
+                                json = JsonConvert.SerializeObject(dataToSend2);
+                                content = new StringContent(json, Encoding.UTF8, "application/json");
+                                response = null;
+                                try
+                                {
+                                    response = await client.PostAsync(url, content);
+                                    if (response.IsSuccessStatusCode)
+                                    {
+                                        var responseContent = await response.Content.ReadAsStringAsync();
+                                        account = JsonConvert.DeserializeObject<_Account>(responseContent);
+                                        Exchange Exchange = new Exchange();
+                                        Exchange.account = account;
+                                        Exchange.Show();
+                                        this.Hide();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("PEBCAK Error!!! SignIn neprošel.");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
+                                }
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Došlo k chybě: {ex.Message}");
+                    }
                 }
-                else 
-                {
-                    MessageBox.Show("Passwords must match");
-                }
-            
+            }
+            else
+            {
+                MessageBox.Show("Passwords must match");
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
