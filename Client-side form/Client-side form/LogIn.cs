@@ -29,49 +29,53 @@ namespace Client_side_form
 
         }
 
-        public async void buttonLogIn2_Click(object sender, EventArgs e)
+        private async void buttonLogIn2_Click(object sender, EventArgs e)
         {
-            //uložit username a password
-            //if username existuje? (najdeme txt file?)
-            //      pokud ne - hodíme no user error
-            //      pokud ano - if pass matchuje?
-            //              pokud ne - hodíme nematchuje pass error
-            //              pokud ano - otevřeme exchange.cs
-            ///////////////
-            string logName = Convert.ToString(textBoxLogName.Text);
-            string logPassword = Convert.ToString(textBoxLogPass.Text);
+            string logName = textBoxLogName.Text;
+            string logPassword = textBoxLogPass.Text;
+
             using (var client = new HttpClient())
             {
-                var url = "http://194.108.31.75:7142/login";
+                var url = "http://192.168.43.31:7142/login";
                 var dataToSend = new
                 {
-                    userName = account.userName,
-                    password = logPassword,
+                    accountName = logName,
+                    password = logPassword
                 };
                 var json = JsonConvert.SerializeObject(dataToSend);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = null;
+
                 try
                 {
                     response = await client.PostAsync(url, content);
                     if (response.IsSuccessStatusCode)
                     {
-                        var responseContent = await response.Content.ReadAsStringAsync();
-                        account = JsonConvert.DeserializeObject<_Account>(responseContent);
-                        MessageBox.Show(Convert.ToString(account.balance));
-                        Exchange Exchange = new Exchange();
-                        Exchange.account = account;
-                        Exchange.Show();
+                        var responseData = await response.Content.ReadAsStringAsync();
+                        var accountData = JsonConvert.DeserializeObject<_Account>(responseData);
+
+                        account = accountData;
+                        Exchange exchange = new Exchange();
+                        exchange.account = account;
+                        exchange.Show();
                         this.Hide();
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.NotFound) // 404
+                    {
+                        MessageBox.Show("No such user exists!");
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden) // 403
+                    {
+                        MessageBox.Show("Wrong password!");
                     }
                     else
                     {
-                        MessageBox.Show("PEBCAK Error!!!");
+                        MessageBox.Show("Login failed. Please try again.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
+                    MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
         }

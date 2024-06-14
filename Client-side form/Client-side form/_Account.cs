@@ -10,7 +10,8 @@ namespace Client_side_form
     public class _Account
     {
         public string userName { get; set; }
-        public int balance { get; set; }
+        public string password { get; set; }
+        public double balance { get; set; }
         public int volume1 { get; set; }
         public int volume2 { get; set; }
         public int volume3 { get; set; }

@@ -33,11 +33,6 @@ namespace Client_side_form
             string signName = Convert.ToString(textBoxSignName.Text);
             string signPassword = Convert.ToString(textBoxSignPass1.Text);
             string signRepeat = Convert.ToString(textBoxSignPass2.Text);
-<<<<<<< HEAD
-            if (signPassword == signRepeat)
-            {
-                using (var client = new HttpClient())
-=======
             string filePath = "C:\\Users\\Public\\Documents\\" + signName + ".txt";
             if (File.Exists(filePath)) 
             {
@@ -46,28 +41,19 @@ namespace Client_side_form
             else
             {
                 if (signPassword == signRepeat)
->>>>>>> parent of ab22af8 (Teoreticky teď login in signin umí zavolat na server ať vytvoří/ pošle údaje na to co je potřeba)
                 {
-                    var url = "http://194.108.31.75:7142/login";
-                    var dataToSend1 = new
+                    account.userName = signName;
+                    using (var client = new HttpClient())
                     {
-                        accountName = account.userName,
-                        password = signPassword,
-                    };
-                    var json = JsonConvert.SerializeObject(dataToSend1);
-                    var content = new StringContent(json, Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = null;
-                    try
-                    {
-                        response = await client.PostAsync(url, content);
-                        if (response.IsSuccessStatusCode)
+                        var url = "http://192.168.43.31:7142/new-user";
+                        var dataToSend = new
                         {
-<<<<<<< HEAD
-                            MessageBox.Show("Such user already exists! Please choose another username.");
-=======
                             accountName = account.userName,
                             password = signPassword,
                             balance = account.balance,
+                            volume1 = account.volume1,
+                            volume2 = account.volume2,
+                            volume3 = account.volume3,
                         };
                         var json = JsonConvert.SerializeObject(dataToSend);
                         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -75,86 +61,35 @@ namespace Client_side_form
                         try
                         {
                             response = await client.PostAsync(url, content);
-                            if (response.IsSuccessStatusCode)
+                            if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 account.userName = signName;
+                                account.password = signPassword;
+                                account.balance = 150;
+                                account.volume1 = 0;
+                                account.volume2 = 0;
+                                account.volume3 = 0;
                                 Exchange Exchange = new Exchange();
                                 Exchange.account = account;
                                 Exchange.Show();
                                 this.Hide();
                             }
-                            else
+                            else if(response.StatusCode == System.Net.HttpStatusCode.Accepted)
                             {
-                                MessageBox.Show("PEBCAK Error!!!");
+                                MessageBox.Show("Such user already exists!");
                             }
->>>>>>> parent of ab22af8 (Teoreticky teď login in signin umí zavolat na server ať vytvoří/ pošle údaje na to co je potřeba)
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            response = null;
-                            account.userName = signName;
-                            using (client)
-                            {
-
-                                var dataToSend2 = new
-                                {
-                                    userName = account.userName,
-                                    password = signPassword,
-                                    balance = 150,
-                                    volume1 = 0,
-                                    volume2 = 0,
-                                    volume3 = 0,
-                                };
-                                url = "http://194.108.31.75:7142/new-user";
-                                json = JsonConvert.SerializeObject(dataToSend2);
-                                content = new StringContent(json, Encoding.UTF8, "application/json");
-                                response = null;
-                                try
-                                {
-                                    response = await client.PostAsync(url, content);
-                                    if (response.IsSuccessStatusCode)
-                                    {
-                                        var responseContent = await response.Content.ReadAsStringAsync();
-                                        account = JsonConvert.DeserializeObject<_Account>(responseContent);
-                                        Exchange Exchange = new Exchange();
-                                        Exchange.account = account;
-                                        Exchange.Show();
-                                        this.Hide();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("PEBCAK Error!!! SignIn neprošel.");
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
-                                }
-                            }
+                            MessageBox.Show($"Došlo k chybě: {ex.Message}");
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Došlo k chybě: {ex.Message}");
                     }
                 }
-<<<<<<< HEAD
-            }
-            else
-            {
-                MessageBox.Show("Passwords must match");
-            }
-
-=======
                 else 
                 {
                     MessageBox.Show("Passwords must match");
                 }
             }
-<<<<<<< HEAD
->>>>>>> parent of ab22af8 (Teoreticky teď login in signin umí zavolat na server ať vytvoří/ pošle údaje na to co je potřeba)
-=======
->>>>>>> parent of ab22af8 (Teoreticky teď login in signin umí zavolat na server ať vytvoří/ pošle údaje na to co je potřeba)
         }
 
         private void button1_Click(object sender, EventArgs e)
