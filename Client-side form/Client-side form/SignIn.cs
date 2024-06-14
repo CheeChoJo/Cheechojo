@@ -151,6 +151,9 @@ namespace Client_side_form
                     MessageBox.Show("Passwords must match");
                 }
             }
+<<<<<<< HEAD
+>>>>>>> parent of ab22af8 (Teoreticky teď login in signin umí zavolat na server ať vytvoří/ pošle údaje na to co je potřeba)
+=======
 >>>>>>> parent of ab22af8 (Teoreticky teď login in signin umí zavolat na server ať vytvoří/ pošle údaje na to co je potřeba)
         }
 
