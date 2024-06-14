@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace Client_side_form
 {
@@ -37,10 +38,11 @@ namespace Client_side_form
         {
             using (var client = new HttpClient())
             {
-                var url = "http://194.108.31.75:7142/change";
+                var url = "http://192.168.43.31:7142/change";
                 var dataToSend = new
                 {
                     accountName = account.userName,
+                    password = account.password,
                     buySell = buySell,
                     volume1 = volume1,
                     volume2 = volume2,

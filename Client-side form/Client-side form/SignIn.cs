@@ -45,12 +45,15 @@ namespace Client_side_form
                     account.userName = signName;
                     using (var client = new HttpClient())
                     {
-                        var url = "http://194.108.31.75:7142/new-user";
+                        var url = "http://192.168.43.31:7142/new-user";
                         var dataToSend = new
                         {
                             accountName = account.userName,
                             password = signPassword,
                             balance = account.balance,
+                            volume1 = account.volume1,
+                            volume2 = account.volume2,
+                            volume3 = account.volume3,
                         };
                         var json = JsonConvert.SerializeObject(dataToSend);
                         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -58,7 +61,7 @@ namespace Client_side_form
                         try
                         {
                             response = await client.PostAsync(url, content);
-                            if (response.IsSuccessStatusCode)
+                            if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 account.userName = signName;
                                 Exchange Exchange = new Exchange();
@@ -66,9 +69,9 @@ namespace Client_side_form
                                 Exchange.Show();
                                 this.Hide();
                             }
-                            else
+                            else if(response.StatusCode == System.Net.HttpStatusCode.Accepted)
                             {
-                                MessageBox.Show("PEBCAK Error!!!");
+                                MessageBox.Show("Such user already exists!");
                             }
                         }
                         catch (Exception ex)

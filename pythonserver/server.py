@@ -39,22 +39,35 @@ def get_data():
 
         return jsonify(data)
         
+
 @app.route('/new-user', methods=["POST"])
 def newuser():
-    data = request.get_json() #veme json a hodi to do data
-    file_name = data.get('accountName')+'.json'
+    data = request.get_json()  # Get the JSON data
+    account_name = data.get('accountName')
+    file_name = os.path.join(os.getcwd(), account_name + '.json')  # Use absolute path for clarity
+    # Log the file name being checked
+    print(f"Checking if file exists: {file_name}")
 
-    with open(file_name, 'w') as account_file: #vytvori novej file 
-        json.dump(data, account_file)
-    return '', 201
-
+    if os.path.exists(file_name):
+        # Log the file existence check
+        print("File exists, returning 202")
+        # If the file already exists, return 202 status
+        return '', 202
+    else:
+        # Log the file creation process
+        print("File does not exist, creating new file and returning 201")
+        # Create a new file and write data to it
+        with open(file_name, 'w') as account_file:
+            json.dump(data, account_file)
+        return '', 201
+    
 
 @app.route('/login')
 def login():
     data = request.get_json()
     file_name = data.get('accountName')+'.json'
 
-    if file_name():
+    if file_name:
         return send_file(file_name, as_attachment=True, mimetype='application/json')
     else:
         return "nope"
