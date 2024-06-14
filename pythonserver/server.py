@@ -44,33 +44,32 @@ def get_data():
 def newuser():
     data = request.get_json()  # Get the JSON data
     account_name = data.get('accountName')
-    file_name = os.path.join(os.getcwd(), account_name + '.json')  # Use absolute path for clarity
-    # Log the file name being checked
+    file_name = os.path.join(os.getcwd(), account_name + '.json')
     print(f"Checking if file exists: {file_name}")
 
     if os.path.exists(file_name):
-        # Log the file existence check
-        print("File exists, returning 202")
-        # If the file already exists, return 202 status
         return '', 202
     else:
-        # Log the file creation process
-        print("File does not exist, creating new file and returning 201")
-        # Create a new file and write data to it
-        with open(file_name, 'w') as account_file:
+       with open(file_name, 'w') as account_file:
             json.dump(data, account_file)
-        return '', 201
+            return '', 201
     
 
-@app.route('/login')
+@app.route('/login', methods=["POST"])
 def login():
     data = request.get_json()
-    file_name = data.get('accountName')+'.json'
-
-    if file_name:
-        return send_file(file_name, as_attachment=True, mimetype='application/json')
+    account_name = data.get('accountName')
+    password = data.get('password')
+    file_name = account_name + '.json'
+    if os.path.exists(file_name):
+        with open(file_name, 'r') as account_file:
+            account_data = json.load(account_file)
+            if account_data.get('password') == password:
+                return jsonify(account_data)
+            else:
+                return jsonify({"error": "Invalid password"}), 403
     else:
-        return "nope"
+        return jsonify({"error": "User not found"}), 404
 
 
 @app.route('/change', methods=['POST', 'GET'])

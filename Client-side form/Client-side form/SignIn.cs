@@ -64,6 +64,11 @@ namespace Client_side_form
                             if (response.StatusCode == System.Net.HttpStatusCode.Created)
                             {
                                 account.userName = signName;
+                                account.password = signPassword;
+                                account.balance = 150;
+                                account.volume1 = 0;
+                                account.volume2 = 0;
+                                account.volume3 = 0;
                                 Exchange Exchange = new Exchange();
                                 Exchange.account = account;
                                 Exchange.Show();
