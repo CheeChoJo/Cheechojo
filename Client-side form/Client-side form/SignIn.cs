@@ -45,12 +45,12 @@ namespace Client_side_form
                     account.userName = signName;
                     using (var client = new HttpClient())
                     {
-                        var url = "http://192.168.43.31:7142/new-user";
+                        var url = "http://10.10.4.44:7142/new-user";
                         var dataToSend = new
                         {
-                            accountName = account.userName,
+                            userName = account.userName,
                             password = signPassword,
-                            balance = account.balance,
+                            balance = 150,
                             volume1 = account.volume1,
                             volume2 = account.volume2,
                             volume3 = account.volume3,
@@ -69,9 +69,9 @@ namespace Client_side_form
                                 account.volume1 = 0;
                                 account.volume2 = 0;
                                 account.volume3 = 0;
-                                Exchange Exchange = new Exchange();
-                                Exchange.account = account;
-                                Exchange.Show();
+                                Exchange exchange = new Exchange();
+                                exchange.account = account;
+                                exchange.Show();
                                 this.Hide();
                             }
                             else if(response.StatusCode == System.Net.HttpStatusCode.Accepted)
@@ -92,7 +92,7 @@ namespace Client_side_form
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
             previousForm.Show();
             this.Close();

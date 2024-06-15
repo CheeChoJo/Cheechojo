@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,9 +11,9 @@ namespace Client_side_form
 {
     public partial class Exchange : Form
     {
-        static double price1 = 10;
-        static double price2 = 20;
-        static double price3 = 30;
+        static double price1;
+        static double price2;
+        static double price3;
         static int volume1 = 1;
         static int volume2 = 2;
         static int volume3 = 3;
@@ -28,13 +29,14 @@ namespace Client_side_form
             textBoxAmountBS.Text = " ";
             textBoxValueBS.Text = "0 €";
             timerExchange.Start();
+            UpdateAccountInfo(); // Initialize the account info when the form loads
         }
 
         private async void BuySell()
         {
             using (var client = new HttpClient())
             {
-                var url = "http://192.168.43.31:7142/change";
+                var url = "http://10.10.4.44:7142/change";
                 var dataToSend = new
                 {
                     accountName = account.userName,
@@ -74,7 +76,7 @@ namespace Client_side_form
         {
             using (var client = new HttpClient())
             {
-                var url = "http://192.168.43.31:7142/";
+                var url = "http://10.10.4.44:7142/";
                 HttpResponseMessage response = null;
 
                 try
@@ -124,8 +126,8 @@ namespace Client_side_form
             textBoxPrice1.BackColor = difference1 < 0 ? negativeChangeColor : (difference1 > 0 ? positiveChangeColor : noChangeColor);
             textBoxPrice2.BackColor = difference2 < 0 ? negativeChangeColor : (difference2 > 0 ? positiveChangeColor : noChangeColor);
             textBoxPrice3.BackColor = difference3 < 0 ? negativeChangeColor : (difference3 > 0 ? positiveChangeColor : noChangeColor);
-
             UpdateValues();
+            Thread.Sleep(1000);
         }
 
         private double ParseDoubleSafe(string text)
@@ -146,6 +148,7 @@ namespace Client_side_form
             textBoxVolume2.Text = account.volume2.ToString();
             textBoxVolume3.Text = account.volume3.ToString();
             textBoxBalance.Text = $"{account.balance} €";
+            textBoxUser.Text = account.userName;
             UpdateValues();
         }
 
@@ -283,6 +286,7 @@ namespace Client_side_form
         private void textBoxPrice3_TextChanged(object sender, EventArgs e)
         {
         }
+
         private void labelValue_Click(object sender, EventArgs e)
         {
             // Implementation for label click event
@@ -290,19 +294,7 @@ namespace Client_side_form
 
         private void Exchange_Load(object sender, EventArgs e)
         {
-            // Implementation for form load event
-            textBoxPrice1.Text = Convert.ToString(price1) + " €";
-            textBoxPrice2.Text = Convert.ToString(price2) + " €";
-            textBoxPrice3.Text = Convert.ToString(price3) + " €";
-            textBoxVolume1.Text = Convert.ToString(account.volume1);
-            textBoxVolume2.Text = Convert.ToString(account.volume2);
-            textBoxVolume3.Text = Convert.ToString(account.volume3);
-            textBoxValue1.Text = Convert.ToString(price1 * account.volume1) + " €";
-            textBoxValue2.Text = Convert.ToString(price2 * account.volume2) + " €";
-            textBoxValue3.Text = Convert.ToString(price3 * account.volume3) + " €";
-            textBoxBalance.Text = Convert.ToString(account.balance) + " €";
-            textBoxSum.Text = Convert.ToString(price1 * account.volume1 + price2 * account.volume2 + price3 * account.volume3) + " €";
-            textBoxUser.Text = Convert.ToString(account.userName);
+            UpdateAccountInfo();
             int update = rnd.Next(1, 4);
             switch (update)
             {
