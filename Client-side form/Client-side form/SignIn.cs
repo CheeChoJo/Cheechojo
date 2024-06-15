@@ -18,6 +18,7 @@ namespace Client_side_form
     {
         public _Account account = new _Account();
         private CheeChoJoClient previousForm;
+        public string serverUrl { get; set; }
         public SignIn(CheeChoJoClient form)
         {
             InitializeComponent();
@@ -45,7 +46,8 @@ namespace Client_side_form
                     account.userName = signName;
                     using (var client = new HttpClient())
                     {
-                        var url = "http://10.10.4.44:7142/new-user";
+                        string usefulUrl = serverUrl + "/new-user";
+                        var url = usefulUrl;
                         var dataToSend = new
                         {
                             userName = account.userName,
@@ -71,6 +73,7 @@ namespace Client_side_form
                                 account.volume3 = 0;
                                 Exchange exchange = new Exchange();
                                 exchange.account = account;
+                                exchange.serverUrl = serverUrl;
                                 exchange.Show();
                                 this.Hide();
                             }

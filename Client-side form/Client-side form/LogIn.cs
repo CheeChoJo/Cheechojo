@@ -10,6 +10,7 @@ namespace Client_side_form
     {
         public _Account account { get; set; }
         private CheeChoJoClient previousForm;
+        public string serverUrl { get; set; }
 
         public LogIn(CheeChoJoClient form)
         {
@@ -22,14 +23,21 @@ namespace Client_side_form
             // Load event logic, if necessary
         }
 
-        private async void buttonLogIn2_Click(object sender, EventArgs e)
+        public async void buttonLogIn2_Click(object sender, EventArgs e)
         {
-            string logName = textBoxLogName.Text;
-            string logPassword = textBoxLogPass.Text;
-
+            //uložit username a password
+            //if username existuje? (najdeme txt file?)
+            //      pokud ne - hodíme no user error
+            //      pokud ano - if pass matchuje?
+            //              pokud ne - hodíme nematchuje pass error
+            //              pokud ano - otevřeme exchange.cs
+            ///////////////
+            string logName = Convert.ToString(textBoxLogName.Text);
+            string logPassword = Convert.ToString(textBoxLogPass.Text);
             using (var client = new HttpClient())
             {
-                var url = "http://10.10.4.44:7142/login";
+                string usefulUrl = serverUrl + "/login";
+                var url = usefulUrl;
                 var dataToSend = new
                 {
                     userName = logName,
@@ -38,7 +46,6 @@ namespace Client_side_form
                 var json = JsonConvert.SerializeObject(dataToSend);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = null;
-
                 try
                 {
                     response = await client.PostAsync(url, content);
@@ -50,25 +57,18 @@ namespace Client_side_form
                         account = accountData;
                         Exchange exchange = new Exchange();
                         exchange.account = account;
+                        exchange.serverUrl = serverUrl;
                         exchange.Show();
                         this.Close();
                     }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.NotFound) // 404
-                    {
-                        MessageBox.Show("No such user exists!");
-                    }
-                    else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden) // 403
-                    {
-                        MessageBox.Show("Wrong password!");
-                    }
                     else
                     {
-                        MessageBox.Show("Login failed. Please try again.");
+                        MessageBox.Show("PEBCAK Error!!!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
                 }
             }
         }

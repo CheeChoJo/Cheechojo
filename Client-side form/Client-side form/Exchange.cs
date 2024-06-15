@@ -22,6 +22,7 @@ namespace Client_side_form
         static double valueBS;
         static Random rnd = new Random();
         public _Account account = new _Account();
+        public string serverUrl { get; set; }
 
         public Exchange()
         {
@@ -36,7 +37,8 @@ namespace Client_side_form
         {
             using (var client = new HttpClient())
             {
-                var url = "http://10.10.4.44:7142/change";
+                string usefulUrl = serverUrl + "/change";
+                var url = usefulUrl;
                 var dataToSend = new
                 {
                     accountName = account.userName,
@@ -76,7 +78,8 @@ namespace Client_side_form
         {
             using (var client = new HttpClient())
             {
-                var url = "http://10.10.4.44:7142/";
+                string usefulUrl = serverUrl + "/";
+                var url = usefulUrl;
                 HttpResponseMessage response = null;
 
                 try
@@ -127,7 +130,6 @@ namespace Client_side_form
             textBoxPrice2.BackColor = difference2 < 0 ? negativeChangeColor : (difference2 > 0 ? positiveChangeColor : noChangeColor);
             textBoxPrice3.BackColor = difference3 < 0 ? negativeChangeColor : (difference3 > 0 ? positiveChangeColor : noChangeColor);
             UpdateValues();
-            Thread.Sleep(1000);
         }
 
         private double ParseDoubleSafe(string text)
