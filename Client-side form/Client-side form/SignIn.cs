@@ -56,6 +56,9 @@ namespace Client_side_form
                             volume1 = account.volume1,
                             volume2 = account.volume2,
                             volume3 = account.volume3,
+                            buySellVolume = account.buySellVolume,
+                            tickerSelected = account.tickerSelected,
+                            priceWhenSelling = account.priceWhenSelling,
                         };
                         var json = JsonConvert.SerializeObject(dataToSend);
                         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -71,6 +74,7 @@ namespace Client_side_form
                                 account.volume1 = 0;
                                 account.volume2 = 0;
                                 account.volume3 = 0;
+                                account.buySellVolume = 0;
                                 Exchange exchange = new Exchange();
                                 exchange.account = account;
                                 exchange.serverUrl = serverUrl;
@@ -95,7 +99,13 @@ namespace Client_side_form
             }
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)//nevim tohle prostě nefunguje fuck my life... to hnedka dole funguje ale
+        {
+            previousForm.Show();
+            this.Close();
+        }
+
+        private void buttonBack_Click_1(object sender, EventArgs e)
         {
             previousForm.Show();
             this.Close();

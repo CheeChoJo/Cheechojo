@@ -18,7 +18,7 @@ namespace Client_side_form
         static int volume2 = 2;
         static int volume3 = 3;
         static int buySell;
-        static int Amount;
+        static int amount;
         static double valueBS;
         static Random rnd = new Random();
         public _Account account = new _Account();
@@ -27,7 +27,7 @@ namespace Client_side_form
         public Exchange()
         {
             InitializeComponent();
-            textBoxAmountBS.Text = " ";
+            textBoxAmountBS.Text = "1";
             textBoxValueBS.Text = "0 €";
             timerExchange.Start();
             UpdateAccountInfo(); // Initialize the account info when the form loads
@@ -39,14 +39,49 @@ namespace Client_side_form
             {
                 string usefulUrl = serverUrl + "/change";
                 var url = usefulUrl;
+                account.balance = account.balance - valueBS;
+                switch (listBoxExchange.SelectedIndex)
+                {
+                    case 0:
+                        if (buySell == 1)
+                        {
+                            account.volume1 += amount;
+                        }
+                        else
+                        {
+                            account.volume1 -= amount;
+                        }
+                        break;
+                    case 1:
+                        if (buySell == 1)
+                        {
+                            account.volume2 += amount;
+                        }
+                        else
+                        {
+                            account.volume2 -= amount;
+                        }
+                        break;
+                    case 2:
+                        if (buySell == 1)
+                        {
+                            account.volume3 += amount;
+                        }
+                        else
+                        {
+                            account.volume3 -= amount;
+                        }
+                        break;
+                }
                 var dataToSend = new
                 {
                     accountName = account.userName,
                     password = account.password,
                     buySell = buySell,
-                    volume1 = volume1,
-                    volume2 = volume2,
-                    volume3 = volume3,
+                    volume1 = account.volume1,
+                    volume2 = account.volume2,
+                    volume3 = account.volume3,
+                    tickerSelected = listBoxExchange.SelectedIndex,
                 };
                 var json = JsonConvert.SerializeObject(dataToSend);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -124,7 +159,7 @@ namespace Client_side_form
 
             Color positiveChangeColor = ColorTranslator.FromHtml("#d91143");
             Color negativeChangeColor = Color.LightGreen;
-            Color noChangeColor = Color.White;
+            Color noChangeColor = Color.Pink;
 
             textBoxPrice1.BackColor = difference1 < 0 ? negativeChangeColor : (difference1 > 0 ? positiveChangeColor : noChangeColor);
             textBoxPrice2.BackColor = difference2 < 0 ? negativeChangeColor : (difference2 > 0 ? positiveChangeColor : noChangeColor);
@@ -135,7 +170,6 @@ namespace Client_side_form
         private double ParseDoubleSafe(string text)
         {
             double result;
-            // Remove the space and the € symbol
             var cleanedText = text.Replace(" €", "").Trim();
             if (double.TryParse(cleanedText, out result))
             {
@@ -160,6 +194,20 @@ namespace Client_side_form
             textBoxValue2.Text = $"{price2 * account.volume2} €";
             textBoxValue3.Text = $"{price3 * account.volume3} €";
             textBoxSum.Text = $"{price1 * account.volume1 + price2 * account.volume2 + price3 * account.volume3} €";
+            int.TryParse(textBoxAmountBS.Text, out amount);
+            switch (listBoxExchange.SelectedIndex)
+            {
+                case 0:
+                    valueBS = price1 * amount;
+                        break;
+                case 1:
+                    valueBS = price2 * amount;
+                    break;
+                case 2:
+                    valueBS = price3 * amount;
+                    break;
+            }
+            textBoxValueBS.Text = $"{valueBS} €";
         }
 
         private async void timerExchange_Tick(object sender, EventArgs e)
@@ -169,18 +217,18 @@ namespace Client_side_form
 
         private void buttonBuySell_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(textBoxAmountBS.Text, out Amount))
+            if (Int32.TryParse(textBoxAmountBS.Text, out amount))
             {
                 switch (listBoxExchange.SelectedIndex)
                 {
                     case 0:
-                        valueBS = price1 * Amount;
+                        valueBS = price1 * amount;
                         break;
                     case 1:
-                        valueBS = price2 * Amount;
+                        valueBS = price2 * amount;
                         break;
                     case 2:
-                        valueBS = price3 * Amount;
+                        valueBS = price3 * amount;
                         break;
                     default:
                         valueBS = 0;
@@ -192,7 +240,6 @@ namespace Client_side_form
                 MessageBox.Show("Enter a valid amount.");
                 return;
             }
-
             if (buySell == 1)
             {
                 if (account.balance < valueBS)
@@ -209,7 +256,7 @@ namespace Client_side_form
                 switch (listBoxExchange.SelectedIndex)
                 {
                     case 0:
-                        if (volume1 < Amount)
+                        if (volume1 < amount)
                         {
                             MessageBox.Show("Insufficient volume to sell.");
                         }
@@ -219,7 +266,7 @@ namespace Client_side_form
                         }
                         break;
                     case 1:
-                        if (volume2 < Amount)
+                        if (volume2 < amount)
                         {
                             MessageBox.Show("Insufficient volume to sell.");
                         }
@@ -229,7 +276,7 @@ namespace Client_side_form
                         }
                         break;
                     case 2:
-                        if (volume3 < Amount)
+                        if (volume3 < amount)
                         {
                             MessageBox.Show("Insufficient volume to sell.");
                         }
@@ -248,11 +295,11 @@ namespace Client_side_form
         {
             if (radioButtonBuy.Checked)
             {
-                buySell = 1;
+                buySell = 1; //buy
             }
             else
             {
-                buySell = 0;
+                buySell = 0; //sell
             }
         }
 
@@ -291,7 +338,6 @@ namespace Client_side_form
 
         private void labelValue_Click(object sender, EventArgs e)
         {
-            // Implementation for label click event
         }
 
         private void Exchange_Load(object sender, EventArgs e)

@@ -106,19 +106,20 @@
             // textBoxUrl
             // 
             this.textBoxUrl.BackColor = System.Drawing.Color.Pink;
-            this.textBoxUrl.Location = new System.Drawing.Point(323, 424);
+            this.textBoxUrl.Location = new System.Drawing.Point(279, 424);
             this.textBoxUrl.Name = "textBoxUrl";
-            this.textBoxUrl.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUrl.Size = new System.Drawing.Size(144, 20);
             this.textBoxUrl.TabIndex = 5;
+            this.textBoxUrl.Text = "http://192.168.43.31:7142";
             // 
             // labelUrl
             // 
             this.labelUrl.AutoSize = true;
-            this.labelUrl.Location = new System.Drawing.Point(285, 427);
+            this.labelUrl.Location = new System.Drawing.Point(214, 427);
             this.labelUrl.Name = "labelUrl";
-            this.labelUrl.Size = new System.Drawing.Size(35, 13);
+            this.labelUrl.Size = new System.Drawing.Size(67, 13);
             this.labelUrl.TabIndex = 6;
-            this.labelUrl.Text = "URL :";
+            this.labelUrl.Text = "server URL :";
             // 
             // CheeChoJoClient
             // 
