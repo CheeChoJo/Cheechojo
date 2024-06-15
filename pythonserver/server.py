@@ -43,7 +43,7 @@ def get_data():
 @app.route('/new-user', methods=["POST"])
 def newuser():
     data = request.get_json()  # Get the JSON data
-    account_name = data.get('accountName')
+    account_name = data.get('userName')
     file_name = os.path.join(os.getcwd(), account_name + '.json')
     print(f"Checking if file exists: {file_name}")
 
@@ -58,7 +58,7 @@ def newuser():
 @app.route('/login', methods=["POST"])
 def login():
     data = request.get_json()
-    account_name = data.get('accountName')
+    account_name = data.get('userName')
     password = data.get('password')
     file_name = account_name + '.json'
     if os.path.exists(file_name):
@@ -76,7 +76,7 @@ def login():
 def change():
     data = request.get_json()
     try: #pokud existuje soubor
-        file_name = data.get('accountName')+'.json'
+        file_name = data.get('userName')+'.json'
         with open(file_name, 'r') as file:
             orig = json.load(file)
         for key, value in data.items():

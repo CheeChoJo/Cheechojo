@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Authentication;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 using System.Net.Http;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Client_side_form
 {
@@ -18,6 +10,7 @@ namespace Client_side_form
     {
         public _Account account { get; set; }
         private CheeChoJoClient previousForm;
+
         public LogIn(CheeChoJoClient form)
         {
             InitializeComponent();
@@ -26,7 +19,7 @@ namespace Client_side_form
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-
+            // Load event logic, if necessary
         }
 
         private async void buttonLogIn2_Click(object sender, EventArgs e)
@@ -36,10 +29,10 @@ namespace Client_side_form
 
             using (var client = new HttpClient())
             {
-                var url = "http://192.168.43.31:7142/login";
+                var url = "http://10.10.4.44:7142/login";
                 var dataToSend = new
                 {
-                    accountName = logName,
+                    userName = logName,
                     password = logPassword
                 };
                 var json = JsonConvert.SerializeObject(dataToSend);
@@ -53,12 +46,12 @@ namespace Client_side_form
                     {
                         var responseData = await response.Content.ReadAsStringAsync();
                         var accountData = JsonConvert.DeserializeObject<_Account>(responseData);
-
+                        account.userName = logName;
                         account = accountData;
                         Exchange exchange = new Exchange();
                         exchange.account = account;
                         exchange.Show();
-                        this.Hide();
+                        this.Close();
                     }
                     else if (response.StatusCode == System.Net.HttpStatusCode.NotFound) // 404
                     {
