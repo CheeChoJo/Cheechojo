@@ -52,7 +52,7 @@ namespace Client_side_form
                         {
                             userName = account.userName,
                             password = signPassword,
-                            balance = 150,
+                            balance = 1000,
                             volume1 = account.volume1,
                             volume2 = account.volume2,
                             volume3 = account.volume3,
