@@ -15,6 +15,10 @@ namespace Client_side_form
         public int volume1 { get; set; }
         public int volume2 { get; set; }
         public int volume3 { get; set; }
+        public int buyOrSell { get; set; }
+        public int buySellVolume { get; set; }
+        public int tickerSelected { get; set; }
+        public int priceWhenSelling { get; set; }
 
         public void LoadN(string username)
         {
