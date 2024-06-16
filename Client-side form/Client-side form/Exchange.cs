@@ -35,48 +35,60 @@ namespace Client_side_form
 
         private async void BuySell()
         {
+            if (radioButtonBuy.Checked)
+            {
+                buySell = 1; //buy
+            }
+            else if (radioButtonSell.Checked)
+            {
+                buySell = 0;
+            }
             using (var client = new HttpClient())
             {
-                string usefulUrl = serverUrl + "/change";
-                var url = usefulUrl;
-                account.balance = account.balance - valueBS;
+                int.TryParse(textBoxAmountBS.Text, out amount);
                 switch (listBoxExchange.SelectedIndex)
                 {
                     case 0:
-                        if (buySell == 1)
-                        {
-                            account.volume1 += amount;
-                        }
-                        else
-                        {
-                            account.volume1 -= amount;
-                        }
+                        valueBS = price1 * amount;
                         break;
                     case 1:
-                        if (buySell == 1)
-                        {
-                            account.volume2 += amount;
-                        }
-                        else
-                        {
-                            account.volume2 -= amount;
-                        }
+                        valueBS = price2 * amount;
                         break;
                     case 2:
-                        if (buySell == 1)
-                        {
-                            account.volume3 += amount;
-                        }
-                        else
-                        {
-                            account.volume3 -= amount;
-                        }
+                        valueBS = price3 * amount;
                         break;
                 }
+                if (buySell == 1) // Buy
+                {
+                    account.balance -= valueBS;
+                }
+                else // Sell
+                {
+                    account.balance += valueBS;
+                }
+
+                switch (listBoxExchange.SelectedIndex)
+                {
+                    case 0:
+                        account.volume1 = buySell == 1 ? account.volume1 + amount: account.volume1 - amount;
+                        break;
+                    case 1:
+                        account.volume2 = buySell == 1 ? account.volume2 + amount: account.volume2 - amount;
+                        break;
+                    case 2:
+                        account.volume3 = buySell == 1 ? account.volume3 + amount: account.volume3 - amount;
+                        break;
+                    default:
+                        MessageBox.Show("Invalid selection.");
+                        return;
+                }
+
+                var url = serverUrl + "/change";
                 var dataToSend = new
                 {
-                    accountName = account.userName,
+                    userName = account.userName,
                     password = account.password,
+                    balance = account.balance,
                     buySell = buySell,
                     volume1 = account.volume1,
                     volume2 = account.volume2,
@@ -85,29 +97,31 @@ namespace Client_side_form
                 };
                 var json = JsonConvert.SerializeObject(dataToSend);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
+
                 HttpResponseMessage response = null;
 
                 try
                 {
                     response = await client.PostAsync(url, content);
+                    var responseContent = await response.Content.ReadAsStringAsync();
                     if (response.IsSuccessStatusCode)
                     {
-                        var responseContent = await response.Content.ReadAsStringAsync();
                         account = JsonConvert.DeserializeObject<_Account>(responseContent);
                         MessageBox.Show($"New Balance: {account.balance}");
                         UpdateAccountInfo();
                     }
                     else
                     {
-                        MessageBox.Show("Transaction failed.");
+                        MessageBox.Show("Transaction failed. Response: " + responseContent); // Log the response for debugging
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error occurred: {ex.Message}");
+                    MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
         }
+
 
         private async Task FetchPrices()
         {
@@ -138,7 +152,7 @@ namespace Client_side_form
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error occurred: {ex.Message}");
+                    MessageBox.Show($"Error number 2 occurred: {ex.Message}");
                 }
             }
         }
@@ -164,6 +178,8 @@ namespace Client_side_form
             textBoxPrice1.BackColor = difference1 < 0 ? negativeChangeColor : (difference1 > 0 ? positiveChangeColor : noChangeColor);
             textBoxPrice2.BackColor = difference2 < 0 ? negativeChangeColor : (difference2 > 0 ? positiveChangeColor : noChangeColor);
             textBoxPrice3.BackColor = difference3 < 0 ? negativeChangeColor : (difference3 > 0 ? positiveChangeColor : noChangeColor);
+
+            UpdateAccountInfo();
             UpdateValues();
         }
 
@@ -180,9 +196,9 @@ namespace Client_side_form
 
         private void UpdateAccountInfo()
         {
-            textBoxVolume1.Text = account.volume1.ToString();
-            textBoxVolume2.Text = account.volume2.ToString();
-            textBoxVolume3.Text = account.volume3.ToString();
+            textBoxVolume1.Text = Convert.ToString(account.volume1);
+            textBoxVolume2.Text = Convert.ToString(account.volume2);
+            textBoxVolume3.Text = Convert.ToString(account.volume3);
             textBoxBalance.Text = $"{account.balance} €";
             textBoxUser.Text = account.userName;
             UpdateValues();
@@ -256,7 +272,7 @@ namespace Client_side_form
                 switch (listBoxExchange.SelectedIndex)
                 {
                     case 0:
-                        if (volume1 < amount)
+                        if (account.volume1 < amount)
                         {
                             MessageBox.Show("Insufficient volume to sell.");
                         }
@@ -266,7 +282,7 @@ namespace Client_side_form
                         }
                         break;
                     case 1:
-                        if (volume2 < amount)
+                        if (account.volume2 < amount)
                         {
                             MessageBox.Show("Insufficient volume to sell.");
                         }
@@ -276,7 +292,7 @@ namespace Client_side_form
                         }
                         break;
                     case 2:
-                        if (volume3 < amount)
+                        if (account.volume3 < amount)
                         {
                             MessageBox.Show("Insufficient volume to sell.");
                         }
@@ -297,10 +313,7 @@ namespace Client_side_form
             {
                 buySell = 1; //buy
             }
-            else
-            {
-                buySell = 0; //sell
-            }
+            UpdateValues();
         }
 
         private void radioButtonSell_CheckedChanged(object sender, EventArgs e)
@@ -309,6 +322,7 @@ namespace Client_side_form
             {
                 buySell = 0;
             }
+            UpdateValues();
         }
 
         private void buttonDetails1_Click(object sender, EventArgs e)
@@ -356,6 +370,11 @@ namespace Client_side_form
                     price3 += 1;
                     break;
             }
+        }
+
+        private void listBoxExchange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateValues();
         }
     }
 }

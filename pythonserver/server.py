@@ -72,21 +72,29 @@ def login():
         return jsonify({"error": "User not found"}), 404
 
 
-@app.route('/change', methods=['POST', 'GET'])
+@app.route('/change', methods=['POST'])
 def change():
     data = request.get_json()
-    try: #pokud existuje soubor
-        file_name = data.get('userName')+'.json'
-        with open(file_name, 'r') as file:
-            orig = json.load(file)
-        for key, value in data.items():
-            if key not in data:  
-                orig[key] = value
-        with open(file_name, 'w') as account_file: #tim ze se soubor otevre ve write modu, viz 'w' se vymaze vsechno info v nem
-            json.dump(orig, account_file) #dropujeme novy info
-        return send_file(file_name, as_attachment=True, mimetype='application/json') #posle soubor zpatky
-    except:
-        return "no such file"
+    account_name = data.get('userName')
+    if not account_name:
+        return jsonify({"error": "Account name is required"}), 400
+    file_name = account_name + '.json'
+    if os.path.exists(file_name):
+        try:
+            with open(file_name, 'r') as file:
+                orig = json.load(file)
+            for key, value in data.items():
+                if key in orig:
+                    orig[key] = value
+            with open(file_name, 'w') as account_file:
+                json.dump(orig, account_file)
+
+            return jsonify(orig)
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+    else:
+        return jsonify({"error": "No such file"}), 404
+
     
 
 if __name__ == '__main__':

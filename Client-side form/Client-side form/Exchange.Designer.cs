@@ -158,7 +158,7 @@
             this.textBoxPrice1.Enabled = false;
             this.textBoxPrice1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice1.Location = new System.Drawing.Point(313, 42);
-            this.textBoxPrice1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrice1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice1.Name = "textBoxPrice1";
             this.textBoxPrice1.Size = new System.Drawing.Size(60, 24);
             this.textBoxPrice1.TabIndex = 6;
@@ -170,7 +170,7 @@
             this.textBoxVolume1.Enabled = false;
             this.textBoxVolume1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVolume1.Location = new System.Drawing.Point(407, 42);
-            this.textBoxVolume1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxVolume1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume1.Name = "textBoxVolume1";
             this.textBoxVolume1.Size = new System.Drawing.Size(60, 24);
             this.textBoxVolume1.TabIndex = 7;
@@ -182,7 +182,7 @@
             this.textBoxValue1.Enabled = false;
             this.textBoxValue1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValue1.Location = new System.Drawing.Point(503, 42);
-            this.textBoxValue1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxValue1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue1.Name = "textBoxValue1";
             this.textBoxValue1.Size = new System.Drawing.Size(60, 24);
             this.textBoxValue1.TabIndex = 8;
@@ -193,7 +193,7 @@
             this.textBoxBalance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBalance.Enabled = false;
             this.textBoxBalance.Location = new System.Drawing.Point(79, 15);
-            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(84, 20);
             this.textBoxBalance.TabIndex = 9;
@@ -204,7 +204,7 @@
             this.radioButtonBuy.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonBuy.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonBuy.Location = new System.Drawing.Point(141, 34);
-            this.radioButtonBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonBuy.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonBuy.Name = "radioButtonBuy";
             this.radioButtonBuy.Size = new System.Drawing.Size(60, 24);
             this.radioButtonBuy.TabIndex = 10;
@@ -219,7 +219,7 @@
             this.radioButtonSell.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonSell.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonSell.Location = new System.Drawing.Point(141, 55);
-            this.radioButtonSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonSell.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonSell.Name = "radioButtonSell";
             this.radioButtonSell.Size = new System.Drawing.Size(59, 24);
             this.radioButtonSell.TabIndex = 11;
@@ -260,7 +260,7 @@
             this.buttonBuySell.ForeColor = System.Drawing.Color.Black;
             this.buttonBuySell.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.buttonBuySell.Location = new System.Drawing.Point(499, 24);
-            this.buttonBuySell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuySell.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuySell.Name = "buttonBuySell";
             this.buttonBuySell.Size = new System.Drawing.Size(93, 65);
             this.buttonBuySell.TabIndex = 14;
@@ -297,7 +297,7 @@
             this.textBoxPrice2.Enabled = false;
             this.textBoxPrice2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice2.Location = new System.Drawing.Point(313, 90);
-            this.textBoxPrice2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrice2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice2.Name = "textBoxPrice2";
             this.textBoxPrice2.Size = new System.Drawing.Size(60, 24);
             this.textBoxPrice2.TabIndex = 17;
@@ -309,7 +309,7 @@
             this.textBoxPrice3.Enabled = false;
             this.textBoxPrice3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice3.Location = new System.Drawing.Point(313, 139);
-            this.textBoxPrice3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrice3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice3.Name = "textBoxPrice3";
             this.textBoxPrice3.Size = new System.Drawing.Size(60, 24);
             this.textBoxPrice3.TabIndex = 18;
@@ -322,7 +322,7 @@
             this.textBoxVolume2.Enabled = false;
             this.textBoxVolume2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVolume2.Location = new System.Drawing.Point(407, 90);
-            this.textBoxVolume2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxVolume2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume2.Name = "textBoxVolume2";
             this.textBoxVolume2.Size = new System.Drawing.Size(60, 24);
             this.textBoxVolume2.TabIndex = 19;
@@ -334,7 +334,7 @@
             this.textBoxVolume3.Enabled = false;
             this.textBoxVolume3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVolume3.Location = new System.Drawing.Point(407, 140);
-            this.textBoxVolume3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxVolume3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume3.Name = "textBoxVolume3";
             this.textBoxVolume3.Size = new System.Drawing.Size(60, 24);
             this.textBoxVolume3.TabIndex = 20;
@@ -346,7 +346,7 @@
             this.textBoxValue2.Enabled = false;
             this.textBoxValue2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValue2.Location = new System.Drawing.Point(503, 90);
-            this.textBoxValue2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxValue2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue2.Name = "textBoxValue2";
             this.textBoxValue2.Size = new System.Drawing.Size(60, 24);
             this.textBoxValue2.TabIndex = 21;
@@ -358,7 +358,7 @@
             this.textBoxValue3.Enabled = false;
             this.textBoxValue3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValue3.Location = new System.Drawing.Point(503, 140);
-            this.textBoxValue3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxValue3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue3.Name = "textBoxValue3";
             this.textBoxValue3.Size = new System.Drawing.Size(60, 24);
             this.textBoxValue3.TabIndex = 22;
@@ -368,7 +368,7 @@
             this.textBoxAmountBS.BackColor = System.Drawing.Color.Pink;
             this.textBoxAmountBS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxAmountBS.Location = new System.Drawing.Point(214, 58);
-            this.textBoxAmountBS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAmountBS.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountBS.Name = "textBoxAmountBS";
             this.textBoxAmountBS.Size = new System.Drawing.Size(65, 20);
             this.textBoxAmountBS.TabIndex = 23;
@@ -379,7 +379,7 @@
             this.textBoxValueBS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValueBS.Enabled = false;
             this.textBoxValueBS.Location = new System.Drawing.Point(413, 59);
-            this.textBoxValueBS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxValueBS.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValueBS.Name = "textBoxValueBS";
             this.textBoxValueBS.Size = new System.Drawing.Size(62, 20);
             this.textBoxValueBS.TabIndex = 24;
@@ -405,6 +405,7 @@
             this.listBoxExchange.Name = "listBoxExchange";
             this.listBoxExchange.Size = new System.Drawing.Size(93, 20);
             this.listBoxExchange.TabIndex = 25;
+            this.listBoxExchange.SelectedIndexChanged += new System.EventHandler(this.listBoxExchange_SelectedIndexChanged);
             // 
             // labelRovn
             // 
@@ -480,7 +481,7 @@
             this.panel1.Controls.Add(this.radioButtonSell);
             this.panel1.Controls.Add(this.radioButtonBuy);
             this.panel1.Location = new System.Drawing.Point(9, 310);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(690, 112);
             this.panel1.TabIndex = 32;
@@ -489,7 +490,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(313, 24);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 65);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -500,7 +501,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(598, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(89, 86);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -527,7 +528,7 @@
             this.panel2.Controls.Add(this.textBoxBalance);
             this.panel2.Controls.Add(this.labelBalance);
             this.panel2.Location = new System.Drawing.Point(430, 9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(262, 79);
             this.panel2.TabIndex = 33;
@@ -538,7 +539,7 @@
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUser.Enabled = false;
             this.textBoxUser.Location = new System.Drawing.Point(78, 46);
-            this.textBoxUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(84, 20);
             this.textBoxUser.TabIndex = 12;
@@ -561,7 +562,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(172, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(96, 75);
             this.pictureBox1.TabIndex = 10;
@@ -599,7 +600,7 @@
             this.panel3.Controls.Add(this.labelValue);
             this.panel3.Controls.Add(this.labelPrice);
             this.panel3.Location = new System.Drawing.Point(9, 91);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(690, 213);
             this.panel3.TabIndex = 34;
@@ -608,7 +609,7 @@
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(34, 131);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(54, 51);
             this.pictureBox6.TabIndex = 35;
@@ -618,7 +619,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(34, 83);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 49);
             this.pictureBox5.TabIndex = 35;
@@ -628,7 +629,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(34, 37);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(43, 45);
             this.pictureBox4.TabIndex = 35;
@@ -707,7 +708,7 @@
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(9, -6);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(332, 94);
             this.pictureBox7.TabIndex = 35;
@@ -723,7 +724,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Exchange";
             this.Text = "Exchange";
             this.Load += new System.EventHandler(this.Exchange_Load);
