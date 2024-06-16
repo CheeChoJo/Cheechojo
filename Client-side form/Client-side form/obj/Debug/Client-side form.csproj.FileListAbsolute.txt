@@ -67,3 +67,40 @@ C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Clie
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details2.resources
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\Newtonsoft.Json.dll
 C:\Users\jirif\csharp\Cheechojo\Client-side form\Client-side form\bin\Debug\Newtonsoft.Json.xml
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.exe.config
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.exe
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\Client-side form.pdb
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\Newtonsoft.Json.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\ZedGraph.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\Newtonsoft.Json.xml
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\OxyPlot.xml
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\ZedGraph.xml
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\de\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\es\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\fr\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\hu\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\it\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\ja\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\pt\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\ru\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\sk\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\sv\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\tr\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.AssemblyReference.cache
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.SuggestedBindingRedirects.cache
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details1.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details2.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Details3.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Exchange.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.CheeChoJoClient.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.LogIn.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.Properties.Resources.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client_side_form.SignIn.resources
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.GenerateResource.cache
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CoreCompileInputs.cache
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.csproj.CopyComplete
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.exe
+C:\škola\Cheechojo\Client-side form\Client-side form\obj\Debug\Client-side form.pdb
