@@ -36,8 +36,11 @@
             // 
             // listBoxRange
             // 
+            this.listBoxRange.BackColor = System.Drawing.Color.HotPink;
             this.listBoxRange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBoxRange.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxRange.FormattingEnabled = true;
+            this.listBoxRange.ItemHeight = 35;
             this.listBoxRange.Items.AddRange(new object[] {
             "1 day",
             "1 week",
@@ -45,50 +48,61 @@
             "1 year",
             "5 years",
             "max"});
-            this.listBoxRange.Location = new System.Drawing.Point(120, 400);
+            this.listBoxRange.Location = new System.Drawing.Point(180, 615);
+            this.listBoxRange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxRange.MultiColumn = true;
             this.listBoxRange.Name = "listBoxRange";
-            this.listBoxRange.Size = new System.Drawing.Size(668, 17);
+            this.listBoxRange.Size = new System.Drawing.Size(1000, 35);
             this.listBoxRange.TabIndex = 0;
             this.listBoxRange.SelectedIndexChanged += new System.EventHandler(this.listBoxRange_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 68);
+            this.label2.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 105);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(154, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "Details for:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 81);
+            this.label3.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 140);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(190, 35);
             this.label3.TabIndex = 3;
-            this.label3.Text = " ticker3";
+            this.label3.Text = "Blackjack bot";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(15, 15);
+            this.buttonBack.BackColor = System.Drawing.Color.DeepPink;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Bradley Hand ITC", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.Location = new System.Drawing.Point(22, 23);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(100, 50);
+            this.buttonBack.Size = new System.Drawing.Size(265, 77);
             this.buttonBack.TabIndex = 4;
             this.buttonBack.Text = "<- Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             // 
             // Details3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 495);
+            this.BackColor = System.Drawing.Color.Pink;
+            this.ClientSize = new System.Drawing.Size(1200, 762);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBoxRange);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Details3";
             this.Text = "Details3";
             this.ResumeLayout(false);

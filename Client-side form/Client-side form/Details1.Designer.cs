@@ -36,8 +36,11 @@
             // 
             // listBoxRange
             // 
+            this.listBoxRange.BackColor = System.Drawing.Color.HotPink;
             this.listBoxRange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBoxRange.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxRange.FormattingEnabled = true;
+            this.listBoxRange.ItemHeight = 35;
             this.listBoxRange.Items.AddRange(new object[] {
             "1 day",
             "1 week",
@@ -45,49 +48,60 @@
             "1 year",
             "5 years",
             "max"});
-            this.listBoxRange.Location = new System.Drawing.Point(120, 400);
+            this.listBoxRange.Location = new System.Drawing.Point(180, 615);
+            this.listBoxRange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBoxRange.MultiColumn = true;
             this.listBoxRange.Name = "listBoxRange";
-            this.listBoxRange.Size = new System.Drawing.Size(668, 17);
+            this.listBoxRange.Size = new System.Drawing.Size(1000, 39);
             this.listBoxRange.TabIndex = 1;
             this.listBoxRange.SelectedIndexChanged += new System.EventHandler(this.listBoxRange_SelectedIndexChanged);
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(15, 15);
+            this.buttonBack.BackColor = System.Drawing.Color.DeepPink;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Bradley Hand ITC", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.Location = new System.Drawing.Point(22, 23);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(100, 50);
+            this.buttonBack.Size = new System.Drawing.Size(257, 77);
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "<- Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 68);
+            this.label1.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(154, 35);
             this.label1.TabIndex = 3;
             this.label1.Text = "Details for:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(129, 35);
             this.label2.TabIndex = 4;
-            this.label2.Text = " ticker1";
+            this.label2.Text = "Bakalari";
             // 
             // Details1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Pink;
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.listBoxRange);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Details1";
             this.Text = "Details1";
             this.ResumeLayout(false);
