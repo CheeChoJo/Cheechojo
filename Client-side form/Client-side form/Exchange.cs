@@ -393,5 +393,14 @@ namespace Client_side_form
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CheeChoJoClient cheeChoJoClient = new CheeChoJoClient();
+            cheeChoJoClient.Show();
+            account = null;
+            cheeChoJoClient.serverUrl = serverUrl;
+            this.Close();
+        }
     }
 }

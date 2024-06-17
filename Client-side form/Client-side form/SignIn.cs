@@ -112,8 +112,9 @@ namespace Client_side_form
                                             Exchange exchange = new Exchange();
                                             exchange.account = account;
                                             exchange.serverUrl = serverUrl;
+                                            previousForm.Hide();
                                             exchange.Show();
-                                            this.Hide();
+                                            this.Close();
                                         }
                                         else if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
                                         {

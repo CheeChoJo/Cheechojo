@@ -82,6 +82,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.buttonSignOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -200,7 +201,7 @@
             this.textBoxBalance.Location = new System.Drawing.Point(79, 15);
             this.textBoxBalance.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBalance.Name = "textBoxBalance";
-            this.textBoxBalance.Size = new System.Drawing.Size(84, 20);
+            this.textBoxBalance.Size = new System.Drawing.Size(104, 20);
             this.textBoxBalance.TabIndex = 9;
             // 
             // radioButtonBuy
@@ -537,15 +538,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepPink;
+            this.panel2.Controls.Add(this.buttonSignOut);
             this.panel2.Controls.Add(this.textBoxUser);
             this.panel2.Controls.Add(this.labelUser);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.textBoxBalance);
             this.panel2.Controls.Add(this.labelBalance);
-            this.panel2.Location = new System.Drawing.Point(430, 9);
+            this.panel2.Location = new System.Drawing.Point(345, 9);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 79);
+            this.panel2.Size = new System.Drawing.Size(347, 79);
             this.panel2.TabIndex = 33;
             // 
             // textBoxUser
@@ -556,7 +558,7 @@
             this.textBoxUser.Location = new System.Drawing.Point(78, 46);
             this.textBoxUser.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(84, 20);
+            this.textBoxUser.Size = new System.Drawing.Size(105, 20);
             this.textBoxUser.TabIndex = 12;
             // 
             // labelUser
@@ -576,10 +578,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(172, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(187, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 75);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -753,6 +755,19 @@
             this.pictureBox7.TabIndex = 35;
             this.pictureBox7.TabStop = false;
             // 
+            // buttonSignOut
+            // 
+            this.buttonSignOut.BackColor = System.Drawing.Color.Pink;
+            this.buttonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSignOut.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSignOut.Location = new System.Drawing.Point(281, 4);
+            this.buttonSignOut.Name = "buttonSignOut";
+            this.buttonSignOut.Size = new System.Drawing.Size(63, 72);
+            this.buttonSignOut.TabIndex = 41;
+            this.buttonSignOut.Text = "Sign Out";
+            this.buttonSignOut.UseVisualStyleBackColor = false;
+            this.buttonSignOut.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -837,5 +852,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonSignOut;
     }
 }

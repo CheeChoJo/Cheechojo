@@ -14,7 +14,8 @@ namespace Client_side_form
     public partial class CheeChoJoClient : Form
     {
         private _Account account;
-        public string serverUrl;
+        public string serverUrl { get; set; }
+        public string inputUrl;
         public CheeChoJoClient()
         {
             InitializeComponent();
@@ -23,12 +24,19 @@ namespace Client_side_form
 
         private void CheeChoJoClient_Load(object sender, EventArgs e)
         {
-
+            if (serverUrl == null)
+            {
+                inputUrl = Convert.ToString(textBoxUrl.Text);
+            }
         }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            serverUrl = Convert.ToString(textBoxUrl.Text);
+
+            if (serverUrl == null)
+            {
+                serverUrl = Convert.ToString(textBoxUrl.Text);
+            }
             LogIn logIn = new LogIn(this);
             logIn.account = account;
             logIn.serverUrl = serverUrl;
@@ -38,6 +46,10 @@ namespace Client_side_form
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
+            if (serverUrl == null)
+            {
+                serverUrl = Convert.ToString(textBoxUrl.Text);
+            }
             serverUrl = Convert.ToString(textBoxUrl.Text);
             SignIn signIn = new SignIn(this);
             signIn.account = account;
