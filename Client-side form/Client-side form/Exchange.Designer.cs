@@ -80,6 +80,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -157,6 +159,7 @@
             this.textBoxPrice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPrice1.Enabled = false;
             this.textBoxPrice1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice1.ForeColor = System.Drawing.Color.Black;
             this.textBoxPrice1.Location = new System.Drawing.Point(313, 42);
             this.textBoxPrice1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice1.Name = "textBoxPrice1";
@@ -169,6 +172,7 @@
             this.textBoxVolume1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVolume1.Enabled = false;
             this.textBoxVolume1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVolume1.ForeColor = System.Drawing.Color.Black;
             this.textBoxVolume1.Location = new System.Drawing.Point(407, 42);
             this.textBoxVolume1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume1.Name = "textBoxVolume1";
@@ -181,6 +185,7 @@
             this.textBoxValue1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValue1.Enabled = false;
             this.textBoxValue1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxValue1.ForeColor = System.Drawing.Color.Black;
             this.textBoxValue1.Location = new System.Drawing.Point(503, 42);
             this.textBoxValue1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue1.Name = "textBoxValue1";
@@ -296,6 +301,7 @@
             this.textBoxPrice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPrice2.Enabled = false;
             this.textBoxPrice2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice2.ForeColor = System.Drawing.Color.Black;
             this.textBoxPrice2.Location = new System.Drawing.Point(313, 90);
             this.textBoxPrice2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice2.Name = "textBoxPrice2";
@@ -308,6 +314,7 @@
             this.textBoxPrice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPrice3.Enabled = false;
             this.textBoxPrice3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice3.ForeColor = System.Drawing.Color.Black;
             this.textBoxPrice3.Location = new System.Drawing.Point(313, 139);
             this.textBoxPrice3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice3.Name = "textBoxPrice3";
@@ -321,6 +328,7 @@
             this.textBoxVolume2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVolume2.Enabled = false;
             this.textBoxVolume2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVolume2.ForeColor = System.Drawing.Color.Black;
             this.textBoxVolume2.Location = new System.Drawing.Point(407, 90);
             this.textBoxVolume2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume2.Name = "textBoxVolume2";
@@ -333,6 +341,7 @@
             this.textBoxVolume3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVolume3.Enabled = false;
             this.textBoxVolume3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVolume3.ForeColor = System.Drawing.Color.Black;
             this.textBoxVolume3.Location = new System.Drawing.Point(407, 140);
             this.textBoxVolume3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume3.Name = "textBoxVolume3";
@@ -345,6 +354,7 @@
             this.textBoxValue2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValue2.Enabled = false;
             this.textBoxValue2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxValue2.ForeColor = System.Drawing.Color.Black;
             this.textBoxValue2.Location = new System.Drawing.Point(503, 90);
             this.textBoxValue2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue2.Name = "textBoxValue2";
@@ -357,6 +367,7 @@
             this.textBoxValue3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValue3.Enabled = false;
             this.textBoxValue3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxValue3.ForeColor = System.Drawing.Color.Black;
             this.textBoxValue3.Location = new System.Drawing.Point(503, 140);
             this.textBoxValue3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue3.Name = "textBoxValue3";
@@ -420,10 +431,13 @@
             // 
             // textBoxSum
             // 
+            this.textBoxSum.BackColor = System.Drawing.Color.Pink;
+            this.textBoxSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxSum.Enabled = false;
-            this.textBoxSum.Location = new System.Drawing.Point(611, 193);
+            this.textBoxSum.ForeColor = System.Drawing.Color.Black;
+            this.textBoxSum.Location = new System.Drawing.Point(503, 181);
             this.textBoxSum.Name = "textBoxSum";
-            this.textBoxSum.Size = new System.Drawing.Size(78, 20);
+            this.textBoxSum.Size = new System.Drawing.Size(60, 20);
             this.textBoxSum.TabIndex = 27;
             // 
             // buttonDetails1
@@ -572,6 +586,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.HotPink;
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -605,6 +621,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(690, 213);
             this.panel3.TabIndex = 34;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox6
             // 
@@ -715,6 +732,26 @@
             this.pictureBox7.TabIndex = 35;
             this.pictureBox7.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(110, 159);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(457, 13);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "___________________________________________________________________________";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(356, 181);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 20);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Value of portfolio";
+            // 
             // Exchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -797,5 +834,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

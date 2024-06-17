@@ -383,5 +383,10 @@ namespace Client_side_form
             account.balance += 1;
             BuySell();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
