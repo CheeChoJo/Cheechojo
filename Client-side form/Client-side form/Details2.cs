@@ -30,5 +30,10 @@ namespace Client_side_form
             previousForm.Show();
             this.Close();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
