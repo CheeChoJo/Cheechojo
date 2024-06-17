@@ -376,5 +376,12 @@ namespace Client_side_form
         {
             UpdateValues();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=xvFZjo5PgG0");
+            account.balance += 1;
+            BuySell();
+        }
     }
 }

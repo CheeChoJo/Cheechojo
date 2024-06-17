@@ -40,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +49,7 @@
             // textBoxSignName
             // 
             this.textBoxSignName.BackColor = System.Drawing.Color.HotPink;
-            this.textBoxSignName.Location = new System.Drawing.Point(17, 177);
+            this.textBoxSignName.Location = new System.Drawing.Point(11, 180);
             this.textBoxSignName.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxSignName.Name = "textBoxSignName";
             this.textBoxSignName.Size = new System.Drawing.Size(214, 20);
@@ -56,7 +58,7 @@
             // textBoxSignPass1
             // 
             this.textBoxSignPass1.BackColor = System.Drawing.Color.HotPink;
-            this.textBoxSignPass1.Location = new System.Drawing.Point(17, 230);
+            this.textBoxSignPass1.Location = new System.Drawing.Point(17, 279);
             this.textBoxSignPass1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxSignPass1.Name = "textBoxSignPass1";
             this.textBoxSignPass1.Size = new System.Drawing.Size(214, 20);
@@ -65,7 +67,7 @@
             // textBoxSignPass2
             // 
             this.textBoxSignPass2.BackColor = System.Drawing.Color.HotPink;
-            this.textBoxSignPass2.Location = new System.Drawing.Point(17, 281);
+            this.textBoxSignPass2.Location = new System.Drawing.Point(17, 337);
             this.textBoxSignPass2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxSignPass2.Name = "textBoxSignPass2";
             this.textBoxSignPass2.Size = new System.Drawing.Size(214, 20);
@@ -89,7 +91,7 @@
             // 
             this.labelSignName.AutoSize = true;
             this.labelSignName.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSignName.Location = new System.Drawing.Point(13, 153);
+            this.labelSignName.Location = new System.Drawing.Point(13, 155);
             this.labelSignName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSignName.Name = "labelSignName";
             this.labelSignName.Size = new System.Drawing.Size(98, 24);
@@ -100,7 +102,7 @@
             // 
             this.labelSignPass1.AutoSize = true;
             this.labelSignPass1.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSignPass1.Location = new System.Drawing.Point(13, 206);
+            this.labelSignPass1.Location = new System.Drawing.Point(13, 254);
             this.labelSignPass1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSignPass1.Name = "labelSignPass1";
             this.labelSignPass1.Size = new System.Drawing.Size(90, 24);
@@ -111,7 +113,7 @@
             // 
             this.labelSignPass2.AutoSize = true;
             this.labelSignPass2.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSignPass2.Location = new System.Drawing.Point(13, 257);
+            this.labelSignPass2.Location = new System.Drawing.Point(13, 311);
             this.labelSignPass2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSignPass2.Name = "labelSignPass2";
             this.labelSignPass2.Size = new System.Drawing.Size(155, 24);
@@ -165,12 +167,34 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.BackColor = System.Drawing.Color.HotPink;
+            this.textBoxEmail.Location = new System.Drawing.Point(17, 226);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(214, 20);
+            this.textBoxEmail.TabIndex = 11;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Bradley Hand ITC", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(13, 201);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(63, 24);
+            this.labelEmail.TabIndex = 12;
+            this.labelEmail.Text = "Email";
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(486, 398);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -206,5 +230,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label labelEmail;
     }
 }

@@ -6,7 +6,9 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +30,26 @@ namespace Client_side_form
         {
 
         }
+        private void EmailSend(string adress) //sends email every time someone signs up
+        {
+            string To = adress;
+            string Subject = "další spokojený uživatel Cheechoja";
+            string Body = "Děkujeme za registraci. Opravud si vážíme vašich osobních údajů a hlavně peněz co jsme Vám, " + account.userName + ", právě vybílili z účtu. S pozdravem Team Cheechoja";
+            string Email = "CheechojoSpam@outlook.cz";
+            string Password = "FilaVila123";
+            string Host = "smtp-mail.outlook.com";
+            int Port = 587;
+            using (MailMessage mail = new MailMessage(Email, To, Subject, Body))
+            {
+                using (SmtpClient smtp = new SmtpClient(Host, Port))
+                {
+                    smtp.UseDefaultCredentials = false;
+                    smtp.EnableSsl = true;
+                    smtp.Credentials = new NetworkCredential(Email, Password);
+                    smtp.Send(mail);
+                }
+            }
+        }
 
         private async void buttonSignIn2_Click(object sender, EventArgs e)
         {
@@ -41,62 +63,80 @@ namespace Client_side_form
             }
             else
             {
-                if (signPassword == signRepeat)
+                string inputEmail = Convert.ToString(textBoxEmail.Text);
+
+                if (inputEmail.Contains('@'))
                 {
-                    account.userName = signName;
-                    using (var client = new HttpClient())
+                    if (inputEmail.Contains('.'))
                     {
-                        string usefulUrl = serverUrl + "/new-user";
-                        var url = usefulUrl;
-                        var dataToSend = new
+                        if (signPassword == signRepeat)
                         {
-                            userName = account.userName,
-                            password = signPassword,
-                            balance = 1000,
-                            volume1 = account.volume1,
-                            volume2 = account.volume2,
-                            volume3 = account.volume3,
-                            buySellVolume = account.buySellVolume,
-                            tickerSelected = account.tickerSelected,
-                            priceWhenSelling = account.priceWhenSelling,
-                        };
-                        var json = JsonConvert.SerializeObject(dataToSend);
-                        var content = new StringContent(json, Encoding.UTF8, "application/json");
-                        HttpResponseMessage response = null;
-                        try
-                        {
-                            response = await client.PostAsync(url, content);
-                            if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                            account.userName = signName;
+                            EmailSend(inputEmail);
+                            using (var client = new HttpClient())
                             {
-                                account.userName = signName;
-                                account.password = signPassword;
-                                account.balance = 150;
-                                account.volume1 = 0;
-                                account.volume2 = 0;
-                                account.volume3 = 0;
-                                account.buySellVolume = 0;
-                                Exchange exchange = new Exchange();
-                                exchange.account = account;
-                                exchange.serverUrl = serverUrl;
-                                exchange.Show();
-                                this.Hide();
-                            }
-                            else if(response.StatusCode == System.Net.HttpStatusCode.Accepted)
-                            {
-                                MessageBox.Show("Such user already exists!");
+                                string usefulUrl = serverUrl + "/new-user";
+                                var url = usefulUrl;
+                                var dataToSend = new
+                                {
+                                    userName = account.userName,
+                                    password = signPassword,
+                                    balance = 1000,
+                                    volume1 = account.volume1,
+                                    volume2 = account.volume2,
+                                    volume3 = account.volume3,
+                                    buySellVolume = account.buySellVolume,
+                                    tickerSelected = account.tickerSelected,
+                                    priceWhenSelling = account.priceWhenSelling,
+                                };
+                                var json = JsonConvert.SerializeObject(dataToSend);
+                                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                                HttpResponseMessage response = null;
+                                try
+                                {
+                                    response = await client.PostAsync(url, content);
+                                    if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                                    {
+                                        account.userName = signName;
+                                        account.password = signPassword;
+                                        account.balance = 1000;
+                                        account.volume1 = 0;
+                                        account.volume2 = 0;
+                                        account.volume3 = 0;
+                                        account.buySellVolume = 0;
+                                        Exchange exchange = new Exchange();
+                                        exchange.account = account;
+                                        exchange.serverUrl = serverUrl;
+                                        exchange.Show();
+                                        this.Hide();
+                                    }
+                                    else if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                                    {
+                                        MessageBox.Show("Such user already exists!");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
+                                }
                             }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show($"Došlo k chybě: {ex.Message}");
+                            MessageBox.Show("Passwords must match");
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Enter a valid email.");
+                    }
                 }
-                else 
+                else
                 {
-                    MessageBox.Show("Passwords must match");
+                    MessageBox.Show("Enter a valid email.");
                 }
             }
+
         }
 
         private void buttonBack_Click(object sender, EventArgs e)//nevim tohle prostě nefunguje fuck my life... to hnedka dole funguje ale
