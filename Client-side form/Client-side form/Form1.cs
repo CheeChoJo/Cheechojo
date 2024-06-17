@@ -28,6 +28,10 @@ namespace Client_side_form
             {
                 inputUrl = Convert.ToString(textBoxUrl.Text);
             }
+            else
+            {
+                textBoxUrl.Text = serverUrl;
+            }
         }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
