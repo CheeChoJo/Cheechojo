@@ -49,7 +49,7 @@
             // textBoxSignName
             // 
             this.textBoxSignName.BackColor = System.Drawing.Color.HotPink;
-            this.textBoxSignName.Location = new System.Drawing.Point(11, 180);
+            this.textBoxSignName.Location = new System.Drawing.Point(17, 180);
             this.textBoxSignName.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxSignName.Name = "textBoxSignName";
             this.textBoxSignName.Size = new System.Drawing.Size(214, 20);
