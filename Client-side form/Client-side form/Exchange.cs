@@ -327,22 +327,22 @@ namespace Client_side_form
 
         private void buttonDetails1_Click(object sender, EventArgs e)
         {
-            Form Details1 = new Details1();
-            Details1.Show();
+            Details1 details1 = new Details1(this);
+            details1.Show();
             this.Hide();
         }
 
         private void buttonDetails2_Click(object sender, EventArgs e)
         {
-            Form Details2 = new Details2();
-            Details2.Show();
+            Details2 details2 = new Details2(this);
+            details2.Show();
             this.Hide();
         }
 
         private void buttonDetails3_Click(object sender, EventArgs e)
         {
-            Form Details3 = new Details3();
-            Details3.Show();
+            Details3 details3 = new Details3(this);
+            details3.Show();
             this.Hide();
         }
 

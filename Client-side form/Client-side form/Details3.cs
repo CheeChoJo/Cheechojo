@@ -12,9 +12,11 @@ namespace Client_side_form
 {
     public partial class Details3 : Form
     {
-        public Details3()
+        private Exchange previousForm;
+        public Details3(Exchange form)
         {
             InitializeComponent();
+            previousForm = form;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -23,6 +25,17 @@ namespace Client_side_form
         }
 
         private void listBoxRange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
