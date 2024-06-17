@@ -70,6 +70,8 @@
             this.labelUser = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -80,8 +82,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -99,7 +99,7 @@
             this.labelPrice.AutoSize = true;
             this.labelPrice.BackColor = System.Drawing.Color.DeepPink;
             this.labelPrice.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.Location = new System.Drawing.Point(323, 10);
+            this.labelPrice.Location = new System.Drawing.Point(288, 10);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(47, 20);
@@ -111,7 +111,7 @@
             this.labelValue.AutoSize = true;
             this.labelValue.BackColor = System.Drawing.Color.DeepPink;
             this.labelValue.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValue.Location = new System.Drawing.Point(507, 10);
+            this.labelValue.Location = new System.Drawing.Point(486, 10);
             this.labelValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelValue.Name = "labelValue";
             this.labelValue.Size = new System.Drawing.Size(52, 20);
@@ -124,7 +124,7 @@
             this.labelVolume.AutoSize = true;
             this.labelVolume.BackColor = System.Drawing.Color.DeepPink;
             this.labelVolume.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVolume.Location = new System.Drawing.Point(404, 10);
+            this.labelVolume.Location = new System.Drawing.Point(357, 10);
             this.labelVolume.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVolume.Name = "labelVolume";
             this.labelVolume.Size = new System.Drawing.Size(66, 20);
@@ -146,7 +146,7 @@
             // 
             this.labelTicker1.AutoSize = true;
             this.labelTicker1.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicker1.Location = new System.Drawing.Point(109, 45);
+            this.labelTicker1.Location = new System.Drawing.Point(97, 45);
             this.labelTicker1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTicker1.Name = "labelTicker1";
             this.labelTicker1.Size = new System.Drawing.Size(47, 20);
@@ -160,7 +160,7 @@
             this.textBoxPrice1.Enabled = false;
             this.textBoxPrice1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPrice1.Location = new System.Drawing.Point(313, 42);
+            this.textBoxPrice1.Location = new System.Drawing.Point(284, 42);
             this.textBoxPrice1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice1.Name = "textBoxPrice1";
             this.textBoxPrice1.Size = new System.Drawing.Size(60, 24);
@@ -173,10 +173,10 @@
             this.textBoxVolume1.Enabled = false;
             this.textBoxVolume1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVolume1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxVolume1.Location = new System.Drawing.Point(407, 42);
+            this.textBoxVolume1.Location = new System.Drawing.Point(348, 42);
             this.textBoxVolume1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume1.Name = "textBoxVolume1";
-            this.textBoxVolume1.Size = new System.Drawing.Size(60, 24);
+            this.textBoxVolume1.Size = new System.Drawing.Size(89, 24);
             this.textBoxVolume1.TabIndex = 7;
             // 
             // textBoxValue1
@@ -186,10 +186,10 @@
             this.textBoxValue1.Enabled = false;
             this.textBoxValue1.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValue1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxValue1.Location = new System.Drawing.Point(503, 42);
+            this.textBoxValue1.Location = new System.Drawing.Point(441, 42);
             this.textBoxValue1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue1.Name = "textBoxValue1";
-            this.textBoxValue1.Size = new System.Drawing.Size(60, 24);
+            this.textBoxValue1.Size = new System.Drawing.Size(143, 24);
             this.textBoxValue1.TabIndex = 8;
             // 
             // textBoxBalance
@@ -208,7 +208,7 @@
             this.radioButtonBuy.AutoSize = true;
             this.radioButtonBuy.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonBuy.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonBuy.Location = new System.Drawing.Point(141, 34);
+            this.radioButtonBuy.Location = new System.Drawing.Point(101, 31);
             this.radioButtonBuy.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonBuy.Name = "radioButtonBuy";
             this.radioButtonBuy.Size = new System.Drawing.Size(60, 24);
@@ -223,7 +223,7 @@
             this.radioButtonSell.AutoSize = true;
             this.radioButtonSell.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonSell.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSell.Location = new System.Drawing.Point(141, 55);
+            this.radioButtonSell.Location = new System.Drawing.Point(101, 54);
             this.radioButtonSell.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonSell.Name = "radioButtonSell";
             this.radioButtonSell.Size = new System.Drawing.Size(59, 24);
@@ -237,7 +237,7 @@
             // 
             this.labelAmountBS.AutoSize = true;
             this.labelAmountBS.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmountBS.Location = new System.Drawing.Point(211, 35);
+            this.labelAmountBS.Location = new System.Drawing.Point(160, 35);
             this.labelAmountBS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmountBS.Name = "labelAmountBS";
             this.labelAmountBS.Size = new System.Drawing.Size(72, 20);
@@ -248,7 +248,7 @@
             // 
             this.labelValueBS.AutoSize = true;
             this.labelValueBS.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValueBS.Location = new System.Drawing.Point(417, 37);
+            this.labelValueBS.Location = new System.Drawing.Point(408, 35);
             this.labelValueBS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelValueBS.Name = "labelValueBS";
             this.labelValueBS.Size = new System.Drawing.Size(52, 20);
@@ -264,10 +264,10 @@
             this.buttonBuySell.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuySell.ForeColor = System.Drawing.Color.Black;
             this.buttonBuySell.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonBuySell.Location = new System.Drawing.Point(499, 24);
+            this.buttonBuySell.Location = new System.Drawing.Point(502, 29);
             this.buttonBuySell.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuySell.Name = "buttonBuySell";
-            this.buttonBuySell.Size = new System.Drawing.Size(93, 65);
+            this.buttonBuySell.Size = new System.Drawing.Size(92, 65);
             this.buttonBuySell.TabIndex = 14;
             this.buttonBuySell.Text = "Buy/Sell";
             this.buttonBuySell.UseVisualStyleBackColor = false;
@@ -277,7 +277,7 @@
             // 
             this.labelTicker2.AutoSize = true;
             this.labelTicker2.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicker2.Location = new System.Drawing.Point(109, 92);
+            this.labelTicker2.Location = new System.Drawing.Point(97, 92);
             this.labelTicker2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTicker2.Name = "labelTicker2";
             this.labelTicker2.Size = new System.Drawing.Size(48, 20);
@@ -288,7 +288,7 @@
             // 
             this.labelTicker3.AutoSize = true;
             this.labelTicker3.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicker3.Location = new System.Drawing.Point(109, 139);
+            this.labelTicker3.Location = new System.Drawing.Point(97, 139);
             this.labelTicker3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTicker3.Name = "labelTicker3";
             this.labelTicker3.Size = new System.Drawing.Size(38, 20);
@@ -302,7 +302,7 @@
             this.textBoxPrice2.Enabled = false;
             this.textBoxPrice2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPrice2.Location = new System.Drawing.Point(313, 90);
+            this.textBoxPrice2.Location = new System.Drawing.Point(284, 90);
             this.textBoxPrice2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice2.Name = "textBoxPrice2";
             this.textBoxPrice2.Size = new System.Drawing.Size(60, 24);
@@ -315,7 +315,7 @@
             this.textBoxPrice3.Enabled = false;
             this.textBoxPrice3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice3.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPrice3.Location = new System.Drawing.Point(313, 139);
+            this.textBoxPrice3.Location = new System.Drawing.Point(284, 136);
             this.textBoxPrice3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice3.Name = "textBoxPrice3";
             this.textBoxPrice3.Size = new System.Drawing.Size(60, 24);
@@ -329,10 +329,10 @@
             this.textBoxVolume2.Enabled = false;
             this.textBoxVolume2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVolume2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxVolume2.Location = new System.Drawing.Point(407, 90);
+            this.textBoxVolume2.Location = new System.Drawing.Point(348, 90);
             this.textBoxVolume2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume2.Name = "textBoxVolume2";
-            this.textBoxVolume2.Size = new System.Drawing.Size(60, 24);
+            this.textBoxVolume2.Size = new System.Drawing.Size(89, 24);
             this.textBoxVolume2.TabIndex = 19;
             // 
             // textBoxVolume3
@@ -342,10 +342,10 @@
             this.textBoxVolume3.Enabled = false;
             this.textBoxVolume3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxVolume3.ForeColor = System.Drawing.Color.Black;
-            this.textBoxVolume3.Location = new System.Drawing.Point(407, 140);
+            this.textBoxVolume3.Location = new System.Drawing.Point(348, 136);
             this.textBoxVolume3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVolume3.Name = "textBoxVolume3";
-            this.textBoxVolume3.Size = new System.Drawing.Size(60, 24);
+            this.textBoxVolume3.Size = new System.Drawing.Size(89, 24);
             this.textBoxVolume3.TabIndex = 20;
             // 
             // textBoxValue2
@@ -355,10 +355,10 @@
             this.textBoxValue2.Enabled = false;
             this.textBoxValue2.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValue2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxValue2.Location = new System.Drawing.Point(503, 90);
+            this.textBoxValue2.Location = new System.Drawing.Point(441, 90);
             this.textBoxValue2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue2.Name = "textBoxValue2";
-            this.textBoxValue2.Size = new System.Drawing.Size(60, 24);
+            this.textBoxValue2.Size = new System.Drawing.Size(142, 24);
             this.textBoxValue2.TabIndex = 21;
             // 
             // textBoxValue3
@@ -368,17 +368,17 @@
             this.textBoxValue3.Enabled = false;
             this.textBoxValue3.Font = new System.Drawing.Font("Bradley Hand ITC", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValue3.ForeColor = System.Drawing.Color.Black;
-            this.textBoxValue3.Location = new System.Drawing.Point(503, 140);
+            this.textBoxValue3.Location = new System.Drawing.Point(441, 136);
             this.textBoxValue3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValue3.Name = "textBoxValue3";
-            this.textBoxValue3.Size = new System.Drawing.Size(60, 24);
+            this.textBoxValue3.Size = new System.Drawing.Size(142, 24);
             this.textBoxValue3.TabIndex = 22;
             // 
             // textBoxAmountBS
             // 
             this.textBoxAmountBS.BackColor = System.Drawing.Color.Pink;
             this.textBoxAmountBS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxAmountBS.Location = new System.Drawing.Point(214, 58);
+            this.textBoxAmountBS.Location = new System.Drawing.Point(164, 54);
             this.textBoxAmountBS.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountBS.Name = "textBoxAmountBS";
             this.textBoxAmountBS.Size = new System.Drawing.Size(65, 20);
@@ -389,10 +389,10 @@
             this.textBoxValueBS.BackColor = System.Drawing.Color.Pink;
             this.textBoxValueBS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValueBS.Enabled = false;
-            this.textBoxValueBS.Location = new System.Drawing.Point(413, 59);
+            this.textBoxValueBS.Location = new System.Drawing.Point(370, 54);
             this.textBoxValueBS.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxValueBS.Name = "textBoxValueBS";
-            this.textBoxValueBS.Size = new System.Drawing.Size(62, 20);
+            this.textBoxValueBS.Size = new System.Drawing.Size(128, 20);
             this.textBoxValueBS.TabIndex = 24;
             // 
             // timerExchange
@@ -412,9 +412,9 @@
             "BKR",
             "STW",
             "BJB"});
-            this.listBoxExchange.Location = new System.Drawing.Point(22, 37);
+            this.listBoxExchange.Location = new System.Drawing.Point(3, 29);
             this.listBoxExchange.Name = "listBoxExchange";
-            this.listBoxExchange.Size = new System.Drawing.Size(93, 20);
+            this.listBoxExchange.Size = new System.Drawing.Size(93, 60);
             this.listBoxExchange.TabIndex = 25;
             this.listBoxExchange.SelectedIndexChanged += new System.EventHandler(this.listBoxExchange_SelectedIndexChanged);
             // 
@@ -423,7 +423,7 @@
             this.labelRovn.AutoSize = true;
             this.labelRovn.BackColor = System.Drawing.Color.Transparent;
             this.labelRovn.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRovn.Location = new System.Drawing.Point(284, 54);
+            this.labelRovn.Location = new System.Drawing.Point(237, 54);
             this.labelRovn.Name = "labelRovn";
             this.labelRovn.Size = new System.Drawing.Size(25, 21);
             this.labelRovn.TabIndex = 26;
@@ -435,9 +435,9 @@
             this.textBoxSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxSum.Enabled = false;
             this.textBoxSum.ForeColor = System.Drawing.Color.Black;
-            this.textBoxSum.Location = new System.Drawing.Point(503, 181);
+            this.textBoxSum.Location = new System.Drawing.Point(412, 182);
             this.textBoxSum.Name = "textBoxSum";
-            this.textBoxSum.Size = new System.Drawing.Size(60, 20);
+            this.textBoxSum.Size = new System.Drawing.Size(172, 20);
             this.textBoxSum.TabIndex = 27;
             // 
             // buttonDetails1
@@ -445,7 +445,7 @@
             this.buttonDetails1.BackColor = System.Drawing.Color.Pink;
             this.buttonDetails1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDetails1.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDetails1.Location = new System.Drawing.Point(598, 37);
+            this.buttonDetails1.Location = new System.Drawing.Point(609, 38);
             this.buttonDetails1.Name = "buttonDetails1";
             this.buttonDetails1.Size = new System.Drawing.Size(74, 28);
             this.buttonDetails1.TabIndex = 29;
@@ -458,7 +458,7 @@
             this.buttonDetails2.BackColor = System.Drawing.Color.Pink;
             this.buttonDetails2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDetails2.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDetails2.Location = new System.Drawing.Point(598, 83);
+            this.buttonDetails2.Location = new System.Drawing.Point(609, 86);
             this.buttonDetails2.Name = "buttonDetails2";
             this.buttonDetails2.Size = new System.Drawing.Size(74, 28);
             this.buttonDetails2.TabIndex = 30;
@@ -471,7 +471,7 @@
             this.buttonDetails3.BackColor = System.Drawing.Color.Pink;
             this.buttonDetails3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDetails3.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDetails3.Location = new System.Drawing.Point(598, 131);
+            this.buttonDetails3.Location = new System.Drawing.Point(609, 132);
             this.buttonDetails3.Name = "buttonDetails3";
             this.buttonDetails3.Size = new System.Drawing.Size(74, 28);
             this.buttonDetails3.TabIndex = 31;
@@ -503,7 +503,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(313, 24);
+            this.pictureBox3.Location = new System.Drawing.Point(267, 29);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 65);
@@ -528,7 +528,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Curlz MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(385, 55);
+            this.label2.Location = new System.Drawing.Point(340, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 21);
             this.label2.TabIndex = 29;
@@ -623,6 +623,27 @@
             this.panel3.TabIndex = 34;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(272, 181);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 20);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Value of portfolio";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(109, 162);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(475, 13);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "______________________________________________________________________________";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
@@ -670,7 +691,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.DeepPink;
             this.label6.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(109, 10);
+            this.label6.Location = new System.Drawing.Point(97, 10);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 20);
@@ -681,7 +702,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(189, 139);
+            this.label5.Location = new System.Drawing.Point(160, 139);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 20);
@@ -692,7 +713,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(189, 91);
+            this.label4.Location = new System.Drawing.Point(160, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
@@ -703,7 +724,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(189, 45);
+            this.label3.Location = new System.Drawing.Point(160, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
@@ -715,7 +736,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DeepPink;
             this.label1.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 10);
+            this.label1.Location = new System.Drawing.Point(160, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 20);
@@ -731,26 +752,6 @@
             this.pictureBox7.Size = new System.Drawing.Size(332, 94);
             this.pictureBox7.TabIndex = 35;
             this.pictureBox7.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(110, 159);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(457, 13);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "___________________________________________________________________________";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bradley Hand ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(356, 181);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 20);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Value of portfolio";
             // 
             // Exchange
             // 

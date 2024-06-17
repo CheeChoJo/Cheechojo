@@ -388,5 +388,10 @@ namespace Client_side_form
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
