@@ -63,77 +63,83 @@ namespace Client_side_form
             }
             else
             {
-                string inputEmail = Convert.ToString(textBoxEmail.Text);
-
-                if (inputEmail.Contains('@'))
+                if (signName.Length > 10)
                 {
-                    if (inputEmail.Contains('.'))
+                    MessageBox.Show("Username must be shorter than 10 characters");
+                }
+                else
+                {
+                    string inputEmail = Convert.ToString(textBoxEmail.Text);
+                    if (inputEmail.Contains('@'))
                     {
-                        if (signPassword == signRepeat)
+                        if (inputEmail.Contains('.'))
                         {
-                            account.userName = signName;
-                            EmailSend(inputEmail);
-                            using (var client = new HttpClient())
+                            if (signPassword == signRepeat)
                             {
-                                string usefulUrl = serverUrl + "/new-user";
-                                var url = usefulUrl;
-                                var dataToSend = new
+                                account.userName = signName;
+                                EmailSend(inputEmail);
+                                using (var client = new HttpClient())
                                 {
-                                    userName = account.userName,
-                                    password = signPassword,
-                                    balance = 1000,
-                                    volume1 = account.volume1,
-                                    volume2 = account.volume2,
-                                    volume3 = account.volume3,
-                                    buySellVolume = account.buySellVolume,
-                                    tickerSelected = account.tickerSelected,
-                                    priceWhenSelling = account.priceWhenSelling,
-                                };
-                                var json = JsonConvert.SerializeObject(dataToSend);
-                                var content = new StringContent(json, Encoding.UTF8, "application/json");
-                                HttpResponseMessage response = null;
-                                try
-                                {
-                                    response = await client.PostAsync(url, content);
-                                    if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                                    string usefulUrl = serverUrl + "/new-user";
+                                    var url = usefulUrl;
+                                    var dataToSend = new
                                     {
-                                        account.userName = signName;
-                                        account.password = signPassword;
-                                        account.balance = 1000;
-                                        account.volume1 = 0;
-                                        account.volume2 = 0;
-                                        account.volume3 = 0;
-                                        account.buySellVolume = 0;
-                                        Exchange exchange = new Exchange();
-                                        exchange.account = account;
-                                        exchange.serverUrl = serverUrl;
-                                        exchange.Show();
-                                        this.Hide();
+                                        userName = account.userName,
+                                        password = signPassword,
+                                        balance = 1000,
+                                        volume1 = account.volume1,
+                                        volume2 = account.volume2,
+                                        volume3 = account.volume3,
+                                        buySellVolume = account.buySellVolume,
+                                        tickerSelected = account.tickerSelected,
+                                        priceWhenSelling = account.priceWhenSelling,
+                                    };
+                                    var json = JsonConvert.SerializeObject(dataToSend);
+                                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+                                    HttpResponseMessage response = null;
+                                    try
+                                    {
+                                        response = await client.PostAsync(url, content);
+                                        if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                                        {
+                                            account.userName = signName;
+                                            account.password = signPassword;
+                                            account.balance = 1000;
+                                            account.volume1 = 0;
+                                            account.volume2 = 0;
+                                            account.volume3 = 0;
+                                            account.buySellVolume = 0;
+                                            Exchange exchange = new Exchange();
+                                            exchange.account = account;
+                                            exchange.serverUrl = serverUrl;
+                                            exchange.Show();
+                                            this.Hide();
+                                        }
+                                        else if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                                        {
+                                            MessageBox.Show("Such user already exists!");
+                                        }
                                     }
-                                    else if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                                    catch (Exception ex)
                                     {
-                                        MessageBox.Show("Such user already exists!");
+                                        MessageBox.Show($"Došlo k chybě: {ex.Message}");
                                     }
                                 }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show($"Došlo k chybě: {ex.Message}");
-                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Passwords must match");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Passwords must match");
+                            MessageBox.Show("Enter a valid email.");
                         }
                     }
                     else
                     {
                         MessageBox.Show("Enter a valid email.");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Enter a valid email.");
                 }
             }
 
