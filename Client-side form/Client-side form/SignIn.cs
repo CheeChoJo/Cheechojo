@@ -30,24 +30,40 @@ namespace Client_side_form
         {
 
         }
-        private void EmailSend(string adress) //sends email every time someone signs up
+        private void EmailSend(string address)
         {
-            string To = adress;
-            string Subject = "další spokojený uživatel Cheechoja";
-            string Body = "Děkujeme za registraci. Opravud si vážíme vašich osobních údajů a hlavně peněz co jsme Vám, " + account.userName + ", právě vybílili z účtu. S pozdravem Team Cheechoja";
-            string Email = "CheechojoSpam@outlook.cz";
-            string Password = "FilaVila123";
-            string Host = "smtp-mail.outlook.com";
-            int Port = 587;
-            using (MailMessage mail = new MailMessage(Email, To, Subject, Body))
+            try
             {
-                using (SmtpClient smtp = new SmtpClient(Host, Port))
+                string To = address;
+                string Subject = "další spokojený uživatel Cheechoja";
+                string Body = "Děkujeme za registraci. Opravdu si vážíme vašich osobních údajů a hlavně peněz co jsme Vám, " + account.userName + ", právě vybílili z účtu. S pozdravem Team Cheechoja";
+                string Email = "CheechojoSpam@outlook.cz";
+                string Password = "H0vnoKlesl0";
+                string Host = "smtp-mail.outlook.com";
+                int Port = 587;
+
+                using (MailMessage mail = new MailMessage(Email, To, Subject, Body))
                 {
-                    smtp.UseDefaultCredentials = false;
-                    smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential(Email, Password);
-                    smtp.Send(mail);
+                    using (SmtpClient smtp = new SmtpClient(Host, Port))
+                    {
+                        smtp.UseDefaultCredentials = false;
+                        smtp.EnableSsl = true;
+                        smtp.Credentials = new NetworkCredential(Email, Password);
+                        smtp.Send(mail);
+                    }
                 }
+
+                MessageBox.Show("Email sent successfully.");
+            }
+            catch (SmtpException ex)
+            {
+                MessageBox.Show($"SMTP Exception: {ex.Message}");
+                // Handle SMTP exceptions, such as authentication issues
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception: {ex.Message}");
+                // Handle other exceptions
             }
         }
 
